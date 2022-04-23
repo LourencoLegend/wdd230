@@ -37,7 +37,12 @@ header, footer, footer a {
 }
 
 header img {
-    
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+
    width: 50%;
    margin: 0 0 0 2%;
    float: right;
