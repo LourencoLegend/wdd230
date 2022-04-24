@@ -26,8 +26,18 @@ header, footer, footer a {
   background-color: #6D326D;
   color: #f5f5f5;
 }
+/* Flexbox wrapper */
+.wrapper {
+  display: flex;
+}
+/* Grid wrapper */
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 16px;
+}
 header img {
-  float: right;
+  float: left;
 }
 header{
   padding: 1.6rem;
@@ -42,7 +52,7 @@ a {
 @media (max-width: 500px) {
   header img {
     float: none;
-    padding: .6rem;
+    padding: .2rem;
     border: 1px solid #fff;
   }
 }
