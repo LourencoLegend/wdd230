@@ -1,7 +1,4 @@
 /* Assignment Portal */
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora&family=Merriweather&display=swap" rel="stylesheet">
 * { margin: 0; box-sizing: border-box; }
 body {
   font-size: 16px;
@@ -9,7 +6,7 @@ body {
   font-family: Lora, serif;
 }
 h1 {
-  font-family: Merriweather, sans serif;
+  font-family: Merriweather, serif;
   text-align: right;
   font-size: 2.8rem;
   line-height: 2.6rem;
