@@ -14,7 +14,7 @@
         grid-column: span 1;
     }
     header {
-        background-color: #986db1;
+        background-color: #b16d85;
         text-align: center;
         text-size-adjust: 20%;
         border-radius: 15px 15px 0px 0px;
@@ -33,15 +33,15 @@
     }
 
     .visual-hierarchy {
-        background-color: #986db1;
+        background-color: #7fb16d;
         border-radius: 15px 15px 15px 15px;
     }
     .rule-of-thirds {
-        background-color: #986db1;
+        background-color: #7fb16d;
         border-radius: 15px 15px 15px 15px;
     }
     .fitts-law {
-        background-color: #986db1;
+        background-color: #7fb16d;
         border-radius: 15px 15px 15px 15px;
     }
 
@@ -49,7 +49,7 @@
         display: grid;
         grid-template-rows: 5em;
         text-align: center;
-        background-color:#986db1;
+        background-color:#b16d85;
         border-radius: 15px 15px 15px 15px;
         padding-top: .5em;
         white-space: normal; 
