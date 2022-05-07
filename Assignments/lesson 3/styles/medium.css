@@ -1,0 +1,23 @@
+@media only screen and (min-width: 48em){
+    main section:nth-child(3) {
+		grid-column: span 2;
+	}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    align-content: center;
+}
+
+img {
+    max-width: 250px;
+}
+
+body {
+    margin-left: 4em;
+    padding: 6em;
+    margin-bottom: 4em;
+}
+
+}
