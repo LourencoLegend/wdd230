@@ -1,72 +1,71 @@
-@media only screen and (min-width: 1px){
-    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap');
-    body {
-        font-size: smaller;
-    }
-    
-    main {
-        background-color: #effffd;
-        padding: 10px;
-        margin-top: 40px;
-    }
-    
-    main img {
-        box-shadow: 5px 5px 5px #999;
-    }
-    
-    footer p {
-        text-align: center;
-    }
-    
-    header {
-        font-size: smaller;
-        display: flex;
-        flex-direction: column;
-        background-color: #42c2ff;
-        padding: 20px;
-        align-items: center;
-    }
-    
-    header h1 {
-        grid-column: 2;
-        grid-row: 1;
-        padding: 20px;
-    }
-    
-    header nav {
-        grid-column: 2/4;
-        grid-row: 2;
-    }
-    
-    header img {
-        padding: 10px;
-        box-shadow: 5px 5px 5px #999;
-        border-radius: 150px;
-    }
-    
-    
-    nav li {
-        color: #2155CD;
-        flex: 1 1 auto;
-    }
-    
-    nav a {
-        color: #2155CD;
-        cursor: pointer;
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        padding: 5px;
-    }
-    
-    nav ul :hover {
-        text-decoration-line: underline;
-    }
-    
-    footer {
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        margin: 0 auto;
-    }
+@media only screen and (min-width: 1px) {
+  @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap");
+  body {
+    font-size: smaller;
+  }
+
+  main {
+    background-color: #effffd;
+    padding: 10px;
+    margin-top: 40px;
+  }
+
+  main img {
+    box-shadow: 5px 5px 5px #999;
+  }
+
+  footer p {
+    text-align: center;
+  }
+
+  header {
+    font-size: smaller;
+    display: flex;
+    flex-direction: column;
+    background-color: #42c2ff;
+    padding: 20px;
+    align-items: center;
+  }
+
+  header h1 {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 20px;
+  }
+
+  header nav {
+    grid-column: 2/4;
+    grid-row: 2;
+  }
+
+  header img {
+    padding: 10px;
+    box-shadow: 5px 5px 5px #999;
+    border-radius: 150px;
+  }
+
+  nav li {
+    color: #2155cd;
+    flex: 1 1 auto;
+  }
+
+  nav a {
+    color: #2155cd;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  nav ul :hover {
+    text-decoration-line: underline;
+  }
+
+  footer {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
 }
