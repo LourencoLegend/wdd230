@@ -1,54 +1,72 @@
-@media only screen and (min-width: 1px){}
-/* Fonts from Google Fonts - more at https://fonts.google.com */
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Tangerine:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
-
+@media only screen and (min-width: 1px){
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap');
     body {
-    background-color: #025e82;
-    font-family: Helvetica, sans-serif;
-    padding: 5px 25px;
-    font-size: 18px;
-    margin: 0;
-    color: white;
-}
-    body{
-        background-image: url(../images/headfoot.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
+        font-size: smaller;
     }
+    
     main {
-        display: grid;
-        grid-template-columns: 1fr;
+        background-color: #effffd;
+        padding: 10px;
+        margin-top: 40px;
+    }
+    
+    main img {
+        box-shadow: 5px 5px 5px #999;
+    }
+    
+    footer p {
         text-align: center;
     }
-    main section:nth-child(3) {
-        grid-column: span 1;
-    }
+    
     header {
-        background-color: #dd8047;
-        text-align: center;
-        text-size-adjust: 20%;
-        border-radius: 15px 15px 0px 0px;
+        font-size: smaller;
+        display: flex;
+        flex-direction: column;
+        background-color: #42c2ff;
+        padding: 20px;
+        align-items: center;
     }
-    img {
-        max-width: 150px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+    
+    header h1 {
+        grid-column: 2;
+        grid-row: 1;
+        padding: 20px;
     }
-    h1, h2, h4 {
-        font-family: 'DM Serif Text', serif;
+    
+    header nav {
+        grid-column: 2/4;
+        grid-row: 2;
     }
-    p, a {
-        font-family: 'Roboto', sans-serif;
+    
+    header img {
+        padding: 10px;
+        box-shadow: 5px 5px 5px #999;
+        border-radius: 150px;
     }
-
-    .visual-hierarchy {
-        background-color: #7fb16d;
-        border-radius: 15px 15px 15px 15px;
+    
+    
+    nav li {
+        color: #2155CD;
+        flex: 1 1 auto;
     }
-    .rule-of-thirds {
-        background-color: #7fb16d;
-        border-radius: 15px 15px 15px 15px;
+    
+    nav a {
+        color: #2155CD;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
     }
+    
+    nav ul :hover {
+        text-decoration-line: underline;
+    }
+    
+    footer {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        margin: 0 auto;
+    }
+}
