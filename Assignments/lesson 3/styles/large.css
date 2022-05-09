@@ -5,7 +5,9 @@
         padding: 10px;
         margin-top: 40px;
     }
-    
+    main img {
+		box-shadow: 15px 15px 15px #999;
+	  }
     /* main img {
         display: block;
     } */
@@ -35,6 +37,9 @@
         border-radius: 150px;
     }
     
+	img {
+		width: 100%;
+	  }
     
     nav li {
         color: #2155CD;
