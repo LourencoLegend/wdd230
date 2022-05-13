@@ -1,55 +1,51 @@
-@media (min-width: 64rem) {
-
+@media only screen and (min-width: 64rem) {
     main {
-        background-color: #effffd;
-        padding: 10px;
-        margin-top: 40px;
+      background-color: #09d4bd;
+      padding: 10px;
+      margin-top: 40px;
     }
     main img {
-		box-shadow: 15px 15px 15px #999;
-	  }
-    
+      box-shadow: 15px 15px 15px #999;
+    }
+  
     footer p {
-        text-align: center;
+      text-align: center;
     }
-    
+  
     header {
-        display: flex;
-        flex-direction: row;
-        background-color: #42c2ff;
-        padding: 20px;
-        align-items: center;
+      display: flex;
+      flex-direction: row;
+      background-color: #42c2ff;
+      padding: 20px;
+      align-items: center;
     }
- 
-    
-    
     header img {
-        padding: 10px;
-        box-shadow: 5px 5px 5px #999;
-        border-radius: 150px;
+      padding: 10px;
+      box-shadow: 5px 5px 5px #999;
+      border-radius: 150px;
     }
-    
-	img {
-		width: 100%;
-	  }
-    
+  
+    img {
+      width: 100%;
+    }
+  
     nav li {
-        color: #2155CD;
+      color: #2155cd;
     }
-    
+  
     nav a {
-        color: #2155CD;
-        cursor: pointer;
-        text-decoration: none;
-        padding: 20px;
+      color: #2155cd;
+      cursor: pointer;
+      text-decoration: none;
+      padding: 20px;
     }
-    
+  
     nav ul li a {
-        padding: .5rem 1rem
+      padding: 0.5rem 1rem;
     }
-    
+  
     nav ul :hover {
-        text-decoration-line: underline;
+      text-decoration-line: underline;
     }
-    
-    }
+  }
+  
