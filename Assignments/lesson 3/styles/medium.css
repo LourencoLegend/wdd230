@@ -1,9 +1,9 @@
-@media (min-width: 500px) {
+@media (min-width: 35rem) {
 
     main {
         background-color: #effffd;
         padding: 10px;
-        margin-top: 40px;
+        
     }
     
     /* main img {
@@ -29,33 +29,23 @@
         padding: 40px;
     }
     
-    
     header img {
         padding: 10px;
         box-shadow: 5px 5px 5px #999;
         border-radius: 150px;
     }
-    
-    
-    nav {
-        flex-direction: row;
-        margin: 40px;
+
+    nav ul#primaryNav {
+        display: flex;
+        margin-left: 2vw;
+        border-left: 1px solid rgba (0, 0, 0,.3);
+        justify-content: center;
     }
-    
-    nav li {
-        color: #2155CD;
+
+    nav ul li a {
+        border: none;
+        border-right: 1px solid rgba (0, 0, 0,.3);
     }
-    
-    nav a {
-        color: #2155CD;
-        cursor: pointer;
-        text-decoration: none;
-        padding: 10px;
-    }
-    
-    
-    nav ul :hover {
-        text-decoration-line: underline;
-    }
-    
+
+    nav button {display: none;
     }

@@ -1,4 +1,4 @@
-@media (min-width: 700px) {
+@media (min-width: 64rem) {
 
     main {
         background-color: #effffd;
@@ -8,9 +8,6 @@
     main img {
 		box-shadow: 15px 15px 15px #999;
 	  }
-    /* main img {
-        display: block;
-    } */
     
     footer p {
         text-align: center;
@@ -23,12 +20,7 @@
         padding: 20px;
         align-items: center;
     }
-    
-    header h1 {
-        grid-column: 2;
-        grid-row: 1;
-        padding: 40px;
-    }
+ 
     
     
     header img {
@@ -52,9 +44,8 @@
         padding: 20px;
     }
     
-    nav ul {
-        display: flex;
-        flex-direction: row;
+    nav ul li a {
+        padding: .5rem 1rem
     }
     
     nav ul :hover {

@@ -1,21 +1,17 @@
-@media only screen and (min-width: 1px) {
-  @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap");
+@media only screen and (min-width: 1rem) {
+  @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap");}
   body {
     font-size: smaller;
   }
 
   main {
-    background-color: #effffd;
+    background-color: #80efe2;
     padding: 10px;
     margin-top: 40px;
   }
 
   main img {
     box-shadow: 15px 15px 15px #999;
-  }
-
-  footer p {
-    text-align: center;
   }
 
   header {
@@ -28,14 +24,12 @@
   }
 
   header h1 {
-    grid-column: 2;
-    grid-row: 1;
     padding: 20px;
   }
 
   header nav {
-    grid-column: 2/4;
-    grid-row: 2;
+    display: flex;
+    text-align: center;
   }
 
   header img {
@@ -43,29 +37,55 @@
     box-shadow: 5px 5px 5px #999;
     border-radius: 150px;
   }
-
+  nav{
+    background-color: #eee;
+  }
   nav li {
     color: #2155cd;
     flex: 1 1 auto;
   }
+  nav button {
+    margin: .02rem 2vw;
+    background-color: #28df40;
+    border: none;
+    font-size: 2rem;
+    color: #555;
+  }
+  nav ul {display: none;
+  }
 
-  nav a {
-    color: #2155cd;
-    cursor: pointer;
+  nav ul.open {display: block;
+  }
+  nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  }
+  nav ul li a{
+    display: block;
+    padding: .8rem 2vw;
     text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
+    color: #333;
+    border-top: 1px solid rgba(0,0,0,.5);
+  }
+
+  nav ul li.active a{
+    background-color: rgba(0,0,0,.2);
+    color: #eee;
   }
 
   nav ul :hover {
     text-decoration-line: underline;
+    background-color: rgba(0,0,0,.2);
+    
   }
-
+  footer p {
+    text-align: center;
+  }
   footer {
     display: flex;
     flex-flow: column;
     justify-content: center;
     margin: 0 auto;
   }
-}
