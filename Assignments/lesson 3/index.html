@@ -1,99 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+    <title>WDD 230 Assignment Portal | Lourenco Da Silva| BYU-Idaho</title>
+    <meta
+      name="description"
+      content="Assignment web page for Lourenco Da Silva, student in  230: Web Frontend Development at Brigham Young University-Idaho"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/medium.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    img {
-      width: 100%;
-      height: auto;
-    }
-  </style>
-  <title>WDD 230 Assignment Portal | Lourenco Da Silva| BYU-Idaho</title>
-  <meta name="description" content="Assignment web page for Lourenco Da Silva, student in  230: Web Frontend Development at Brigham Young University-Idaho">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/medium.css">
-  <link rel="stylesheet" href="styles/large.css">
-</head>
+  <body>
+    <header>
+      <h1>Sao Paulo Chamber Of Commerce</h1>
+      <nav>
+        <button id="hamburgerBtn"><span>&#9776;</span><span>x</span></button>
 
-<body>
-  <header class="scrolled">
-    <h1>Sao Paulo Chamber Of Commerce</h1>
-    <nav>
-  <button id="hamburgerBtn">&#9776;</button>
+        <ul id="primaryNav">
+          <li class="active"><a href="./index.html">Home</a></li>
+          <li class="active">
+            <a href="target-audience.html">Target Audience</a>
+          </li>
+          <li class="active"><a href="color-scheme.html">Color Scheme</a></li>
+          <li class="active"><a href="typography.html">Typography</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <ul id="primaryNav">
-        <li class="active"><a href="./index.html">Home</a></li>
-        <li class="active"><a href="target-audience.html">Target Audience</a></li>
-        <li class="active"><a href="color-scheme.html">Color Scheme</a></li>
-        <li class="active"><a href="typography.html">Typography</a></li>      
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <h1>Sao Paulo</h1>
-    <img src="imglesson3/SaoPaulo1.jpg" alt="Picture of Sao Paulo" />
-    <div class="city-main">
-      <div class="intro-video">
-        <h2>Introduction Video</h2>
-        <iframe width="100%" height="400" src="https://www.youtube.com/embed/cjvkOHeVRCs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <article>
-          <h1>Ibirapuera Park</h1>
-          <img src="imglesson3/SaoPaulo4.jpg" alt="Picture of Sao Paulo" />
-          <p>
-            I want to introduce a few places in my Birth place; the City of Sao Paulo, in Brazil;
-            I know that it is not possible to show everything in a video<br>
-            but is worthwile a visit and actually see for yourself how beautiful the city of Sao Paulo, Brazil is.
-          </p>
-        </article>
+    <main>
+      <h1>Sao Paulo</h1>
+      <div class="img"></div>
+        <img src="imglesson3/SaoPaulo1.jpg" alt="Picture of Sao Paulo" />
       </div>
-
-      <div class="city-option">
+      <div class="iframe-container">
+        <h2>Introduction Video</h2>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/cjvkOHeVRCs"
+          title="YouTube video player"
+          style="border: 0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+        <h2>Introduction Video</h2>
+      </div>
+      <article>
+        <h2>Ibirapuera Park</h2>
+        <img src="imglesson3/SaoPaulo4.jpg" alt="Picture of Sao Paulo" />
+        <p>
+          I want to introduce a few places in my Birth place; the City of Sao
+          Paulo, in Brazil; I know that it is not possible to show everything in
+          a video<br />
+          but is worthwile a visit and actually see for yourself how beautiful
+          the city of Sao Paulo, Brazil is.
+        </p>
+      </article>
+      <div class="img">
         <img src="imglesson3/SaoPaulo2.jpg" alt=" Sao Paulo - Brazil" />
         <article>
           <h2>History</h2>
           <p>
-            São Paulo is the largest city of Brazil and the largest city proper in the Americas and the southern hemisphere.
-            It's also one of the top 10 largest metropolitan areas in the world.
-            São Paulo is a global city with a strong influence in the arts, entertainment, finance and commerce,
-            and the city hosts the largest gay pride parade in the world.
-            Known colloquially as Sampa or Cidade da Garoa (city of drizzle), the municipality had a 2011 population of 11.31 million.
+            São Paulo is the largest city in Brazil and the largest city proper
+            in the Americas and the southern hemisphere. It's also one of the
+            top 10 largest metropolitan areas in the world. São Paulo is a
+            global city with a strong influence in the arts, entertainment,
+            finance, and commerce, and the city hosts the largest gay pride
+            parade in the world. Known colloquially as Sampa or Cidade da Garoa
+            (city of drizzle), the municipality had a 2011 population of 11.31
+            million.
           </p>
         </article>
       </div>
-
-      <div class="city-option reversed">
+      <div class="img">
         <img src="imglesson3/SaoPaulo3.jpg" alt="Demographic picture" />
-        <article>
-          <h2>Demographic</h2>
-          <p>
-            São Paulo refers to both a state and city in Brazil, but this article will only cover the scope of the city itself.
-            As of July 1st of 2021, approximately 12.4 million people lived in São Paulo, making it the biggest municipality in Brazil
-            and one of the most populated cities in the world.
-            The homonymous state of São Paulo was also the most populous federal entity in the country.
+      </div>
+      <article>
+        <h2>Demographic</h2>
+        <p>
+          São Paulo refers to both a state and city in Brazil, but this article
+          will only cover the scope of the city itself. As of July 1st of 2021,
+          approximately 12.4 million people lived in São Paulo, making it the
+          biggest municipality in Brazil and one of the most populated cities in
+          the world. The homonymous state of São Paulo was also the most
+          populous federal entity in the country.
+        </p>
+      </article>
+    </main>
 
-          </p>
-
-  </main>
-  <footer>
-    <div class="copyright">
-      <p>
-        &copy; 2022- Lourenco Da Silva
-      </p>
-
-  </footer>
-</body>
-
-</html>
-
-<script src="js/script.js"></script>
-<script src="js/scrollingEvent.js"></script>
-</body>
-
+    <footer>
+      <div class="copyright">
+        <p>&copy; 2022- Lourenco Da Silva</p>
+      </div>
+    </footer>
+    <script src="js/javascript.js"></script>
+   </body>
 </html>
