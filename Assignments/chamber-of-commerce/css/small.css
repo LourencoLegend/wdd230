@@ -132,7 +132,7 @@ footer div {
 
 footer div img {
 	width: 100px;
-    display: block;
+    display: flex;
 }
 footer {
     background-color: #0868c7;

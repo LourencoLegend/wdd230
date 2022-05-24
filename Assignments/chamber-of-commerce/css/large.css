@@ -2,7 +2,7 @@
 
 
     .headerLogo {
-        width: 150px;
+        width: 120px;
         margin-right: 10px;
         margin-left: 10px;
         margin-top: 10px;
@@ -34,7 +34,7 @@
     }
 
     #mainNav ul li a{
-        padding: .8rem 2vw;
+        padding: .5rem 2vw;
         flex: 0 0 auto;
         text-decoration: none;
         color: white;
