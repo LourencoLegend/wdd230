@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Open+Sans&display=swap');
+
+
+/* phone or baseline views **************************/
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+	text-align: center;
+
+}
+h1 {
+    color: white;
+    font-family: 'Lato', sans-serif, serif;
+    
+    margin: auto auto auto 10px;
+    
+    font-size: 1.5rem;
+}
+header {
+    background-color: #0868c7;
+    color: white;
+    
+}
+
+#currentdate {
+    background-color: #5dfdca88;
+    margin: 10px;
+    position: relative;
+    padding: 10px;
+    border-bottom: 10px solid #0868c7;
+}
+
+.headerWrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.headerLogo {
+    width: 80px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+	
+}
+
+.social-1 {
+    width: 30px;
+    margin: auto 0;
+    padding: 5px;
+}
+.social-2 {
+    width: 30px;
+    margin: auto 0;
+    padding: 5px;
+}
+
+
+button {
+    margin: .2rem 2vw;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+
+}
+
+#mainNav {display: none;}
+
+.dropDownNav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px
+    
+}
+.dropDownNav ul li a {
+	display: block;
+    text-decoration: none;
+    list-style: none;
+    padding: 15px;
+    text-align: center;
+    background-color: #19c38d88;
+    color: #fff;
+    border: 1px solid black;
+}
+
+
+.dropDownNav ul li.active a {
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+}
+
+.dropDownNav ul li a:hover {
+    background-color: #5C0029;
+}
+
+
+.dropDownNav ul {display: none;}
+.dropDownNav ul.open {display: block;}
+
+#hamburgerBtn span:nth-child(1) {display: block;}
+#hamburgerBtn span:nth-child(2) {display: none;}
+
+#hamburgerBtn.open span:nth-child(1) {display: none;}
+#hamburgerBtn.open span:nth-child(2) {display: block;}
+
+
+
+#date {
+    text-align: center;
+    padding: 20px;
+}
+
+main div {
+    background-color: #079c6da7;
+    height: 150px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin:10px auto;
+    }
+
+.join {
+    display: none;
+}
+
+footer div {
+    margin: auto;
+}
+
+footer div img {
+	width: 100px;
+    display: block;
+}
+footer {
+    background-color: #0868c7;
+    color: white;
+    margin-top: 10px;
+}
+footer div p {
+    text-align: center;
+}
+footer div p a {
+    color: white;
+}
+
+footer div:nth-child(2) {
+    text-align: center;
+    padding: 10px;
+}
+
+.spotlight {
+    height: 280px;
+    padding: 10px;
+    margin: auto;
+}
+.spotlight p:nth-child(3){
+    display: none;
+}
+.spotlight p {
+    margin: auto;
+    border: 1px solid black;
+    padding: 60px 110px;
+}
+.mapIcon img {
+	width: 30px;
+}
