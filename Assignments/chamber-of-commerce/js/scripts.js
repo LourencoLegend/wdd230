@@ -43,3 +43,8 @@ function toggleMenu() {
 
 const x = document.getElementById('hamburgerBtn')
 x.onclick = toggleMenu;
+
+const banner = document.getElementById("banner");
+if (d === 1 || d === 2) {
+    banner.style.display = 'block';
+}

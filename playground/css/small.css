@@ -1,0 +1,141 @@
+
+/* https://coolors.co/e07e79-78e09e-cc0000 
+Main color - 78E09E
+Secondary color - 4BA3C3
+Tertiary color - CC0000
+*/
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Quicksand&display=swap');
+
+header {
+    background-color: #4ba3c3;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    border-bottom: 2px solid #CC0000;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;
+    }
+
+    .logo img {
+        width: 80px;
+        height: auto;
+    }
+
+    .headings {
+        display: flex;
+        flex-direction: column;
+        margin-left: .5rem;
+    }
+
+    .headings h1 {
+        font-size: 1.5rem;
+    }
+
+    .c {
+        letter-spacing: .5pt;
+        color: #CC0000;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    .social {
+        margin-right: 1.5rem;
+        max-width: 20px;
+    }
+
+
+    nav button {
+        margin: .2rem 2vw;
+        background: transparent;
+        border: none;
+        font-size: 2rem;
+        color: #cc1111;
+    }
+
+nav {
+    background-color: #4ba3c3;
+    border-bottom: 2px solid #CC0000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+nav ul li a {
+    display: block;
+    padding: .8rem 2vw;
+    text-decoration: none;
+    color: #CC0000;
+    border-top: 2px solid rgba(0,0,0,0.5);
+}
+
+/* Add the active class to the page link for each page. */
+nav ul li.active a {
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0,0,0,0.3);
+}
+
+nav ul {display: none;}
+nav ul.open {display: block;}
+
+#hamburgerBtn span:nth-child(1) {display: block;}
+#hamburgerBtn span:nth-child(2) {display: none;}
+
+#hamburgerBtn.open span:nth-child(1) {display: none;}
+#hamburgerBtn.open span:nth-child(2) {display: block;}
+
+main {
+    display: grid;
+    gap: .25rem;
+}
+
+main div {
+    background-color: #888;
+    padding: 2rem;
+    border: 5px #000;
+    
+}
+
+.hero {
+    order: -1;
+    position: relative;
+}
+
+.news {
+    order: -2;
+}
+
+.joinHere {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: radial-gradient(#cc0000, #78e09e)
+}
+
+#banner {
+    display: none;
+    margin: 0 auto;
+    border: 1px solid #bbb;
+    background-color: #eee;
+    padding: 1rem;
+    text-align: center;
+}
+
+#newsImg {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    width: 100%;
+}

@@ -19,17 +19,17 @@ h1 {
     font-size: 1.5rem;
 }
 header {
-    background-color: #0868c7;
+    background-color: #ed1c16;
     color: white;
     
 }
 
 #currentdate {
-    background-color: #5dfdca88;
+    background-color: #0085ce;
     margin: 10px;
     position: relative;
     padding: 10px;
-    border-bottom: 10px solid #0868c7;
+    border-bottom: 10px solid #25d366;
 }
 
 .headerWrapper {
@@ -81,7 +81,7 @@ button {
     list-style: none;
     padding: 15px;
     text-align: center;
-    background-color: #19c38d88;
+    background-color: #ed1c16;
     color: #fff;
     border: 1px solid black;
 }
@@ -93,7 +93,7 @@ button {
 }
 
 .dropDownNav ul li a:hover {
-    background-color: #5C0029;
+    background-color: #25d366;
 }
 
 
@@ -135,7 +135,7 @@ footer div img {
     display: flex;
 }
 footer {
-    background-color: #0868c7;
+    background-color: #ed1c16;
     color: white;
     margin-top: 10px;
 }
