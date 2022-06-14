@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 239, 239);
+}
+
+div{
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+}
+
+h1{
+	text-align: center;
+	margin: 2em auto;	
+}
+
+img[data-src] {
+	filter: blur(.6em);
+}
+
+img{
+	filter: blur(0);
+	transition: filter .6s;
+    margin: 10px;
+    border: 10px double black;
+    box-shadow: 10px 10px 10px rgb(84, 101, 60);
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1;
+    justify-content: center;
+    
+}
+
+picture img[data-src] {
+    filter: blur(0.2em);
+}
+
+picture img {
+    filter: blur(0em);
+    transition: filter 0.5s;
+}
