@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+    <title>WDD 230 Assignment Portal | Lourenco Da Silva| BYU-Idaho</title>
+    <meta
+      name="description"
+      content="Assignment web page for Lourenco Da Silva, student in  230: Web Frontend Development at Brigham Young University-Idaho"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/medium.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+  </head>
+
+  <body>
+    <header class="scrolled">
+      <h1>Sao Paulo Chamber Of Commerce</h1>
+      <nav>
+        <button id="hamburgerBtn"><span>&#9776;</span><span>x</span></button>
+
+        <ul id="primaryNav">
+          <li class="active"><a href="./index.html">Home</a></li>
+          <li class="active">
+            <a href="target-audience.html">Target Audience</a>
+          </li>
+          <li class="active"><a href="color-scheme.html">Color Scheme</a></li>
+          <li class="active"><a href="typography.html">Typography</a></li>
+        </ul>
+      </nav>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="target-audience.html">Target Audience</a></li>
+        <li><a href="color-scheme.html">Color Scheme</a></li>
+        <li><a href="typography.html">Typography</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="cards">
+        <div class="card">
+          <h2>Julie Da Silva</h2>
+          <img src="images/" alt="Julie Da Silva profile pic" />
+          <p><strong>Supervisor</strong></p>
+          <ul>
+            <li>Under 50 years</li>
+            <li>Married</li>
+            <li>Multiple kids</li>
+            <li>Looking for new places to Travel</li>
+            <li>$50,000</li>
+          </ul>
+          <p>Quote: <cite>"If you are happy, Keep going!"</cite></p>
+        </div>
+
+        <div class="card">
+          <h2>Target Audience</h2>
+          <p>
+            This site is planned for people who want to know about new places to
+            travel and expand their horizons.
+          </p>
+          <h2>Scenarios</h2>
+          <p>
+            A business person deciding to invest outside the area where he lives
+          </p>
+          <p>A man looking to visit a large city</p>
+          <p>A family picnic activity at a park</p>
+          <p>A young woman with her friends in the park.</p>
+        </div>
+
+        <div class="card">
+          <h2>Jeff Dalton</h2>
+          <img
+            src="images/angie-hunter-profile.jpg"
+            alt="Jeff Dalton profile pic"
+          />
+          <p><strong>Photographer</strong></p>
+          <ul>
+            <li>22 years old</li>
+            <li>Single</li>
+            <li>Childless</li>
+            <li>Has a Fotographer Associate degree</li>
+            <li>$30,000</li>
+          </ul>
+          <p>Quote: <cite>"To acquire knowledge, one must study; but to acquire wisdom, one must observe. Marilyn vos Savant"</cite></p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="copyright">
+        <p>&copy; 2022- Lourenco Da Silva</p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/scrollingEvent.js"></script>
+  </body>
+</html>
