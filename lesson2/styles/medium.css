@@ -1,0 +1,22 @@
+@media (min-width: 32.5em){
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    .container{
+        padding: 1em;
+    }
+    #repetition{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    #white_space{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    #fitts_law{
+        grid-column: 1/-1;
+        grid-row: 2/3;
+    }
+}

@@ -1,0 +1,20 @@
+@media (min-width: 60em){
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .container{
+        padding: 1em;
+    }
+    #repetition{
+        grid-column: 1/2;
+    }
+    #white_space{
+        grid-column: 2/3;
+    }
+    #fitts_law{
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+}

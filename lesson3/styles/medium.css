@@ -1,0 +1,4 @@
+@media (min-width: 60em){
+    nav ul { display: flex; }
+	nav ul li { flex: 1 1 auto; }
+}

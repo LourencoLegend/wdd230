@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Provo Chamber of Commerce - Discover</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Ruei-Han Chang">
+        <meta name="description" content="Assignment portal for Ruei-Han Chang in WDD 230: Web Frontend Development at Brigham Young University - Idaho">
+        <link rel="stylesheet" href="styles/normalize.css" />
+        <link rel="stylesheet" href="styles/base.css" />
+        <link rel="stylesheet" href="styles/medium.css" />
+        <link rel="stylesheet" href="styles/large.css" />
+        <link rel="shortcut icon" href="images/favicon.ico">
+    </head>
+    <body id="content">
+        <div id="banner">
+            <p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m</p>
+        </div>
+        <header>
+            <img src="images/provo_logo.webp" alt="provo_logo"> 
+            <h1 id="page_title">Provo</h1>
+            <p id="page_title">Chamber of Commerce</p>
+            <div id="social">
+                <img src="images/facebook_logo.png" alt="provo_logo">
+            <img src="images/linkedin_logo.png" alt="provo_logo">
+            </div>
+            <nav>
+                <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+                <ul id="primaryNav">
+                    <li><a href="index.html" target="_self">Home</a></li>
+                    <li><a href="discover.html" target="_self">Discover</a></li>
+                    <li><a href="directory.html" target="_self">Directory</a></li>
+                    <li><a href="join.html" target="_self">Join</a></li>
+                    <li><a href="contact.html" target="_self">Contact</a></li>
+                </ul>
+            </nav>            
+            <span id="currentdate"></span>
+        </header>
+        <main class="discover">
+            <div>
+                <h1>Discover</h1>
+                <h2>Bridal Veil Falls, Provo, Utah</h2>
+                <img src="images/placeholder-image.png" data-src="images/bridal_veil_falls.jpg" alt="bridal_veil_falls">
+                <p>Bridal Veil Falls is a 600-foot-tall waterfall nestled in the southern end of Provo Canyon. Easily reached by car, the mulch-tiered falls are visible from US Route 189. The falls have a rich history due to their association with an aerial tramway that was constructed in 1961. The tram was once lauded as the "world's steepest tramway," but an avalanche destroyed the machinery in 1996.</p>
+                
+                <h2>Provo Canyon</h2>
+                <img src="images/placeholder-image.png" data-src="images/provo_canyon.jpg" alt="bridal_veil_falls">
+                <p>Tucked in the Wasatch Mountains, Provo Canyon is known for its abundance of rock climbing, hiking, and biking trails. The canyon's main attractions are Bridal Veil Falls, the Sundance Mountain Resort and ski area, the Provo River, and Deer Creek Reservoir, a 2700-acre body of water that is used throughout the year for boating, swimming, fishing, and ice fishing. Soldier Hollow in Wasatch Mountain State Park, which was the venue for cross-country skiing and biathlon events during the 2002 Winter Olympics, is also located in Provo Canyon.</p>                
+                
+                <h2>Museum of Peoples and Cultures, Provo, UT</h2>
+                <img src="images/placeholder-image.png" data-src="images/museum_of_ppl_and_culture.jpg" alt="bridal_veil_falls">
+                <p>The Museum of Peoples and Cultures at Brigham Young University houses anthropological, archaeological and ethnographic artifacts from past and present times. Located on BYU campus, the goal of the museum is to inspire BYU students and the public toward an understanding of and appreciation for people from around the world. The museum achieves this goal through exhibitions, field activities, and research. The BYU Museum of Peoples and Cultures also hosts events and programs throughout the year. These events are open to everyone, although some events are specifically geared toward families, couples, and scouting groups.</p>
+
+                <h2>Brigham Young University Museum of Art, Provo, Utah</h2>
+                <img src="images/placeholder-image.png" data-src="images/byu_moa.jpg" alt="bridal_veil_falls">
+                <p>Also known as the MOA, the Brigham Young University Museum of Art is a four-story facility framed by the dramatic Wasatch Mountain Range. The museum is home to ten exhibition galleries, classrooms, an auditorium, a gift shop, and a theater. There is also a cafe on the top floor of the building. As part of BYU campus, the museum offers extensive resources for art students and aspiring art teachers. The museum also arranges student internships and runs a volunteer program for people who want to become museum docents. The volunteer program gives docents the opportunity to organize and participate in symposiums, lectures, and other special events.</p>
+                
+                <h2>The Covey Center for The Arts, Provo, UT</h2>
+                <img src="images/placeholder-image.png" data-src="images/covey_center_of_art.jpg" alt="bridal_veil_falls">
+                <p>The Covey Center for the Arts is located on historic Center Street in downtown Provo. The center offers live performances, art exhibits, dance classes, and more. There are three art galleries within the building that house works from prominent Utah artists. A 90-seat theater inside the Covey Center is used for special performances and events. The main performance hall can be rented in half-day, full-day, and full-week increments. Rentals may include custodial service, stage staffing, stage setup and other services for an additional fee. People can also rent studio space in the Covey Center for dance classes and workshops.</p>
+            </div>        
+        </main>
+        <footer>
+            <div>Website visit count:</div>
+            <div class="website-counter"></div>
+            <img src="images/provo_logo.webp" alt="provo_logo"> 
+            <div>
+                <p id="footer_title">Provo Chamber of Commerce</p>
+                <p>2696 N University Ave Suite 220, Provo, UT 84604</p>
+            </div>
+            <div>
+                <p>provocamberofcommorce.com</p>
+                <p>+1 (123) 456-7890</p>
+                <p><a href="https://goo.gl/maps/3Ag2PanQReeVNFuG9" target="_blank">Location Map</a></p>
+            </div>
+            <div id="white_line">
+                <p>&copy;2022 Provo Chamber</p>
+                <p>Ruei-Han Chang</p>
+                <p>WDD 230 Project</p>
+                <p>Last updated: <span id="lastmod"></span></p>
+            </div>
+        </footer>
+        <script src="scripts/currentdate.js"></script>
+        <script src="scripts/toggleMenu.js"></script>
+        <script src="scripts/lazy_load.js"></script>
+        <script src="scripts/visit_count.js"></script>
+    </body>
+</html>

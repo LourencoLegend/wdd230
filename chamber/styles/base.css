@@ -1,0 +1,303 @@
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a | */
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Kanit:wght@700&display=swap');
+
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #8FDFF4;
+  --secondary-color: #FDB01F;
+  --accent1-color: #3DBF33;
+  --accent2-color: #08A8E0;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "Kanit";
+  --paragraph-font: "Bitter";
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: #08A8E0;
+  --headline-color-on-color: white;
+  --paragraph-color-on-white: black;
+  --paragraph-color-on-color: white;
+  --paragraph-background-color: #14213D;
+  --nav-link-color: #14213D;
+  --nav-background-color: #3DBF33;
+  --nav-hover-link-color: #FCA311;
+  --nav-hover-background-color: #08A8E0;
+}
+
+html {
+  background-color: var(--primary-color);
+  min-width: 375px;
+}
+
+body {
+  max-width: 1500px;
+  min-width: 375px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+main {
+  max-width: 1500px;
+  margin: auto;
+  
+}
+
+div{
+  background-color: white;
+  margin: 1em;
+  padding: 1em;
+}
+
+img {
+  max-width: 100%;
+  filter: blur(0em);
+  transition: filter 0.5s;
+}
+
+img[data-src] {
+  filter: blur(0.2em);
+}
+
+.container{
+    padding: 1em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+  padding: 1em;
+  margin: 0;
+}
+
+header {
+  padding: 1em;
+  background-color: var(--headline-color-on-white);
+  display: grid;
+  grid-template-columns: 60px auto 99px 41px;
+  grid-template-rows: auto auto auto;
+  
+}
+
+header img {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  max-width: 60px;
+  align-self: center;
+  justify-self: center;
+}
+
+#social {
+  background-color: transparent;
+  padding: 3px;
+  margin: 0%;
+  align-self: center;
+  justify-self: center;
+}
+
+#social img {
+  max-width: 30px;
+}
+
+#currentdate {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  color: white;
+  grid-row: -2/-1;
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+header > h1, header > p {
+  color: var(--headline-color-on-color);
+  text-align: left;
+  padding: 0;
+}
+
+header > h1 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  align-self: end;
+  padding: 0 10px;
+}
+
+header > p {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  text-align: start;
+  padding: 2px 10px;
+}
+
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color);
+  padding: 1em;
+  font-size: 1em;
+  margin: 0;
+}
+
+.large_only, .mid_only{display: none;}
+
+nav{
+  position: absolute;
+  right: 32px;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  font-family: var(--heading-font);
+  font-size: 1em;
+	background-color: var(--nav-background-color);
+}
+
+nav ul {
+	list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  right: 63px;
+  z-index: 1;
+}
+
+nav ul li a {
+	display: block;
+  background-color: #3DBF33;
+	color: var(--headline-color-on-color);
+  padding: 1rem;
+	text-align: center;
+  text-decoration: none;
+}
+
+nav button {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  align-self: center;
+  justify-self: center;
+}
+
+nav ul li a:hover {
+  background-color: var(--nav-hover-link-color);
+  color: black;
+}
+
+nav ul{display: none;}
+nav ul.open {position: relative; display: inline-block;}
+#hamburgerBtn span:nth-child(1) {display: block;}
+#hamburgerBtn span:nth-child(2) {display: none;}
+#hamburgerBtn.open span:nth-child(1) {display: none;}
+#hamburgerBtn.open span:nth-child(2) {display: block;}
+
+a {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color);
+  padding: 0.4em;
+  font-size: 1em;  
+}
+
+footer {
+  text-align: center;
+  background-color: var(--headline-color-on-white);
+  color: white;
+}
+
+footer div p {
+  padding: 0;
+}
+
+footer > img {
+  max-width: 120px;
+  padding: 0.3rem;
+}
+
+footer > div {
+  background-color: transparent;
+  padding: 0.3rem;
+  margin: 0;
+}
+
+#white_line {
+ border-top: 1px solid white;
+ margin: 0 1rem;
+}
+
+#footer_title {
+  font-size: larger;
+}
+
+#banner{
+  display: none;
+  text-align: center;
+  background-color: var(--accent1-color);
+  color: white;
+  font-size: large;
+  margin: 1em 0;
+}
+
+picture.hero_pic {
+  display: block;
+  width: auto;
+}
+
+
+/*---------FORM---------*/
+form fieldset {
+  margin: 2rem 0;
+  border: 1px solid #08A8E0;
+  border-radius: 10px;
+  padding: .5rem 2%;
+}
+form legend {
+  color:#08A8E0;
+  margin: 0 1rem;
+  padding: 0 .5rem;
+  font-size: 1.2rem;
+}
+form label.top, form div {
+  display: block;
+  padding-top: 1rem;
+  color: black;
+  font-size: 1rem;
+}
+form label.top input, form label.top textarea {
+  -webkit-appearance: none;
+  display: block;
+  font-size: 1rem;
+  border: solid 1px #999;
+  border-radius: 4px;
+  padding: .75rem;
+  color: black;
+  width: 100%;
+  max-width: 20rem;
+  background-color: rgba(0, 0, 0, 0.13);
+
+}
+form label.top textarea{
+  padding: 1.5rem .75rem;
+}
+form label.sbs {
+  display: block;
+  padding: .75rem 0;
+  color: black;
+}
+form input.submitBtn {
+  border: none;
+  background-color: #3DBF33;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  padding: .75rem 1.5rem;
+  margin: 0 0 2rem 2%;
+  width: 96%;
+  max-width: 20rem;    
+}
+form label.top input:required {
+  border: red solid 1px;
+}
+form label.top input:required:valid {
+  border: green solid 1px;
+}
+form p{
+  display: none;
+}

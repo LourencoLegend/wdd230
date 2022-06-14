@@ -1,0 +1,12 @@
+@media (min-width: 32.5em) {
+    #name{
+        font-size: 3em;
+    }
+    h1{
+      font-size: 2em;  
+    }
+    li{
+      padding: 1em;
+      font-weight: bold;
+    }
+}
