@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sao Paulo Chamber of Commerce</title>
+    <link rel="home icon" href="images/Favicon.ico" />
+
+    <link href="css/small.css" rel="stylesheet" />
+    <link href="css/medium.css" rel="stylesheet" />
+    <link href="css/large.css" rel="stylesheet" />
+    <link href="css/normalize.css" rel="stylesheet" />
+
+    <script src="js/chamber.js" defer></script>
+    <script src="js/windchill.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="headerWrapper">
+        <img
+          class="headerLogo"
+          src="images/saopaulocity.jpeg"
+          alt="Chamber Logo"
+          width="75"
+        />
+        <h1>Sao Paulo Chamber of Commerce</h1>
+        <div class="social">
+          <a href="https://www.instagram.com" target="_blank">
+            <img src="images/instagram.png" alt="Instagram link" />
+          </a>
+          <a href="https://www.facebook.com" target="_blank">
+            <img src="images/facebook.png" alt="Twitter link" />
+          </a>
+        </div>
+        <nav id="mainNav">
+          <ul>
+            <li><a href="#">Discover</a></li>
+            <li><a href="#">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+      </div>
+      <nav class="dropDownNav">
+        <ul id="primaryNav">
+          <li><a href="#">Discover</a></li>
+          <li><a href="#">Directory</a></li>
+          <li><a href="#">Join</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div id="currentdate"></div>
+      <div id="banner">
+        🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00
+        p.m.<button id="close">X</button>
+      </div>
+      <div id="today"></div>
+    </header>
+
+    <main>
+      <div class="hero">
+        <figure class="hero">
+          <img
+            src="images/herolarge.png"
+            alt="wdd230-org"
+            srcset="
+              images/herolarge.png  1x,
+              images/heromedium.png 1x,
+              images/herosmall.png  1x
+            "
+          />
+        </figure>
+        <p>Hero with site name and call to action.</p>
+      </div>
+
+      <div class="event">
+        <p>Event</p>
+      </div>
+      <div class="weather">
+        <p>Weather</p>
+      </div>
+      <section class="topics">
+        <picture>
+          <source
+            media="(min-width:54.5em)"
+            srcset="images/wdd230_image_saopaulolarge.jpg"
+          />
+          <source
+            media="(min-width:34.5em)"
+            srcset="images/wdd230_image_saopaulomedium.jpg"
+          />
+          <source
+            media="(min-width:14.5em)"
+            srcset="images/wdd230_image_saopaulosmall.jpg"
+          />
+          <img
+            class="hero"
+            src="images/wdd230_image_saopauloOriginal.jpeg"
+            alt="Sao Paulo"
+          />
+        </picture>
+        <p class="weatherSummary">
+          Currently: Sunny<br />
+          High: <span class="high">65</span><span>&deg;</span>F<br />
+          Wind Chill: <span class="chill"></span><span>&deg;</span>F<br />
+          Humidity: 95%<br />
+          Wind Speed: <span class="wind">12</span>mph<br />
+        </p>
+      </section>
+      <div class="news">
+        <p>News Release</p>
+      </div>
+      <div class="spotlight">
+        <p>Spotlight 1</p>
+        <p>Spotlight 2</p>
+        <p>Spotlight 3</p>
+      </div>
+      <div class="join">
+        <p>Join</p>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <img src="images/saopaulocity.jpeg" alt="Chamber Logo" />
+
+        <p>
+          <strong>Sao Paulo Chamber of Commerce</strong>
+        </p>
+        <p>
+          admin@spchamber.com<br />
+          (702) 504-4388<br />
+          <span class="mapIcon"
+            ><img src="images/mapicon.png" alt="map icon"
+          /></span>
+          <a href="https://maps.google.com"> Location Map</a>
+        </p>
+      </div>
+      <div>
+        &copy; <span id="year"></span> | Sao Paulo Chamber of Commerce |
+        Lourenco Da Silva | WDD 230 Project | <span id="lastmod"></span>
+      </div>
+    </footer>
+  </body>
+</html>
