@@ -14,15 +14,23 @@ div{
     align-items: center;
 }
 
-h1{
+h1, h2{
 	text-align: center;
 	margin: 2em auto;	
+    margin-top: 2rem;
+
 }
 
 img[data-src] {
 	filter: blur(.6em);
 }
-
+ p {
+    margin: 10px;
+    border: 10px double black;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 10px 10px 10px rgb(84, 101, 60);
+ }
 img{
 	filter: blur(0);
 	transition: filter .6s;
