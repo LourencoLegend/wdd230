@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cousine&family=Libre+Franklin:wght@500&family=Oswald&family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="description" content="OpenWeatherMap API" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="weatherapi.js" defer></script>
+    <title>Weather API</title>
+  </head>
+  <body>
+    <header>
+      <h1>OpenWeatherMap.org API Test</h1>
+    </header>
+    <hr />
+    <main>
+      <p>
+        The current temperature in Fairbanks, Alaska is
+        <span id="current-temp"></span>&deg;F
+      </p>
+      <h2>Current Condition Icon</h2>
+      <figure>
+        <img
+          src="https://openweathermap.org/city/5369568"
+          alt="weather-icon"
+          id="weather-icon"
+        />
+        <figcaption></figcaption>
+      </figure>
+    </main>
+  </body>
+  <footer>
+    <p>
+      Weather information provided by
+      <a
+        class="weather-link"
+        href="https://openweathermap.org/city/5369568"
+        target="_blank"
+        >&#128204; OpenWeatherMap.org</a
+      >
+    </p>
+    <hr />
+    ©️ 2022 Lourenco Da Silva | 🏛 BYU-Idaho | WDD 230
+  </footer>
+</html>
