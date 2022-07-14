@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+main {
+    background-color: rgb(140, 202, 99);
+    border-radius: 2rem;
+    text-align: center;
+    margin: 1rem;
+}
+main p {
+    padding: 1rem
+}
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px 20px ;
+    border: 1px solid rgba(215, 9, 9, 0.888);
+    padding: .5rem;
+    background-color: rgb(45, 222, 208);
+    text-align: center;
+    padding-left: 2rem;
+    border-radius: 1rem;
+}

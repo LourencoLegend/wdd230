@@ -1,0 +1,122 @@
+@media only screen and (min-width: 36rem) {
+    body {
+        max-width: 700px;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .hero {
+        grid-column: span 3;
+        margin: 10px 0px;
+        grid-row: 1;
+        height: 450px;
+    }
+
+    .hero img {
+        /*width: 100%;
+        height: 100%;*/
+        max-width: 680px;
+    }
+
+    .news {
+        margin: 10px 0px;
+        grid-column: span 3;
+        grid-row: 2;
+        max-width: 700px;
+        height: 150px;
+    }
+
+    .spotlight {
+        margin: 10px 0px;
+        grid-column: span 3;
+        grid-row: 3;
+        display: flex;
+        height: 325px;
+        max-width: 700px;
+        padding: 0px;
+        justify-content: space-around;
+    }
+
+    .spotlight1,
+    .spotlight2,
+    .spotlight3 {
+        margin: auto;
+        margin-left: 5px;
+        margin-right: 5px;
+        border: 1px solid gray;
+        padding: 10px 10px;
+        width: 310px;
+    }
+
+    .join {
+        display: grid;
+        margin: 10px 0px;
+        grid-column: span 3;
+        grid-row: 4;
+        text-align: center;
+        height: 150px;
+    }
+
+    .join h2 {
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        font-size: 30px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .join a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .event {
+        margin: 10px 10px 10px 0px;
+        grid-column: span 2;
+        grid-row: 5;
+        height: 350px;
+    }
+
+    .weather {
+        margin: 10px 0px 10px 10px;
+        grid-column: 3;
+        grid-row: 5;
+        height: 350px;
+    }
+
+    footer div:nth-child(1) {
+        display: flex;
+
+    }
+
+    footer div:nth-child(1) img,
+    footer div:nth-child(1) p {
+        margin: auto
+    }
+/*for discovery page*/
+.aquaticCenter:hover, .mtnBiking:hover, .riverTrail:hover, .sternwheeler:hover, .history:hover{
+    box-shadow: 10px 10px 5px darkgray;
+} 
+    .discover {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/*for join page*/
+.joinPage {
+    display: block;
+    width: 540px;
+    margin: 0 auto;
+}
+
+/*for directory*/
+#directory {
+    display: block;
+}
+/* for contact page*/
+.contactMain {
+    display: block;
+}
+}

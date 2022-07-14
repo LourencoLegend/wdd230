@@ -1,0 +1,77 @@
+{
+    "companies": [
+        {
+            "name": "Larry-Fouss Construction",
+            "address": "2535 Highland Ridge Road Lowell OH 45744",
+            "phone": "(740) 896-2425",
+            "website": "http://larryfoussconstruction.com/",
+            "imageName": "images/construction350w.webp",
+            "memLevel": "NP"
+        },
+        {
+            "name": "Peoples Bank",
+            "address": "138 Putnam Street PO Box 738 Marietta OH 45750",
+            "phone": "(740) 373-3155",
+            "website": "https://www.peoplesbancorp.com/",
+            "imageName": "images/bank350w.webp",
+            "memLevel": "Bronze"
+        },
+        {
+            "name": "River City Dental Group",
+            "address": "124 3rd Street Marietta OH 45750",
+            "phone": "(740) 373-1826",
+            "website": "http://www.rivercitydentalgroupoh.com/",
+            "imageName": "images/dental350w.webp",
+            "memLevel": "Silver"
+        },
+        {
+            "name": "Mar-Pak, Inc.",
+            "address": "519 Fort Street PO Box 685 Marietta OH 45750",
+            "phone": "(740) 374-5893",
+            "website": "https://mar-pak.com/",
+            "imageName": "images/packaging350w.webp",
+            "memLevel": "Gold"
+        },
+        {
+            "name": "Bella Via Salon",
+            "address": "#7 Tiber Way Marietta OH 45750",
+            "phone": "(740) 336-7854",
+            "website": "https://salonbellavia.com/",
+            "imageName": "images/salon350w.webp",
+            "memLevel": "NP"
+        },
+        {
+            "name": "American Electric Power",
+            "address": "777 Hopewell Drive Heath OH 43056",
+            "phone": "(740) 622-7984",
+            "website": "https://www.aep.com/",
+            "imageName": "images/AEP350w.webp",
+            "memLevel": "Bronze"
+        },
+        {
+            "name": "Passiflora Studio",
+            "address": "113 Maple St. Marietta OH 45750",
+            "phone": "(740) 350-4905",
+            "website": "https://www.passiflorastudio.com/",
+            "imageName": "images/flower350w.webp",
+            "memLevel": "Silver"
+        },
+        {
+            "name": "Marietta Adventure Company",
+            "address": "219 B Second Street Marietta OH 45750",
+            "phone": "(740) 538-0801",
+            "website": "https://www.mariettaadventurecompany.com/",
+            "imageName": "images/btm350w.webp",
+            "memLevel": "Gold"
+        },
+        {
+            "name": "The Original Pizza Place",
+            "address": "231 Second Street Marietta OH 45750",
+            "phone": "(740) 374-4333",
+            "website": "https://www.theoriginalpizzaplace.com",
+            "imageName": "images/pizza350w.webp",
+            "memLevel": "NP"
+        }
+
+    ]
+}

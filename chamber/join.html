@@ -1,102 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sao Paulo Chamber of Commerce</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marietta Ohio Chamber of Commerce</title>
+    <meta name="description" content="Discover page for Marietta Ohio Chamber of Commerce">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/small.css" rel="stylesheet">
+    <link href="css/medium.css" rel="stylesheet">
+    <link href="css/large.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+</head>
 
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/medium.css" />
-    <link rel="stylesheet" href="styles/large.css" />
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-
-    <script src="js/chamber.js" defer></script>
-    <script src="js/windchill.js"></script>
-  </head>
-  <body id="content">
-    <div id="banner">
-      <p>
-        🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m
-      </p>
-    </div>
+<body>
     <header>
-      <img src="images/favicon_io/favicon-16x16.png" alt="sao_paulo_logo" />
-      <h1 id="page_title">Sao Paulo</h1>
-      <p>Chamber of Commerce</p>
-      <div id="social">
-        <img src="images/facebook_logo.png" alt="facebook_logo" />
-        <img src="images/linkedin_logo.png" alt="linkedin_logo" />
-      </div>
-      <nav>
-        <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
-        <ul id="primaryNav">
-          <li><a href="index.html" target="_self">Home</a></li>
-          <li><a href="discovers.html" target="_self">Discover</a></li>
-          <li><a href="directory.html" target="_self">Directory</a></li>
-          <li><a href="join.html" target="_self">Join</a></li>
-          <li><a href="contact.html" target="_self">Contact</a></li>
-        </ul>
-      </nav>
-      <span id="currentdate"></span>
+        <div class='classInvite'>&#x1F91D; Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</div>
+        <div class="headerWrapper">
+            <img class="headerLogo" src="images/cc-logo.webp" alt="Chamber Logo">
+            <h1>Marietta Ohio<br>
+                Chamber of Commerce</h1>
+
+            <nav id="largeView">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="social" href="https://www.facebook.com"><img src="images/blueFacebook.png"
+                    alt="Facebook icon"></a>
+            <a class="social" href="https://www.linkedin.com"><img src="images/blueLinkedin.png"
+                    alt="LinkedIn icon"></a>
+            <button class="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+        </div>
+        <nav class="smallView">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div id="date"></div>
+
     </header>
-        <main class="join">
-            <div>
-                <h1>Join The Commerce Application</h1>
-                <form method="get" action="thanksjoin.html">
-                    <fieldset>
-                        <legend>Applicant Information</legend>
-                        <label class="top">First Name*<input type="text" name="fname" required></label>
-                        <label class="top">Last Name*<input type="text" name="lname" required></label>
-                        <label class="top">Email*<input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="YourEmail123@email.com"></label>
-                        <label class="top">Phone*<input type="tel" name="phone" required></label>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Applicant Busniess Information</legend>
-                        <label class="top">Business Name/Title*<input type="text" name="businessName" required></label>
-                        <label class="top">Position Title<input type="text" name="jobtitle" pattern="[A-Za-z- ]{7}"></label>
-                        <label class="top">Business Description<textarea name="businessDescription"></textarea></label>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Membership Level</legend>
-                        <label class="sbs"><input type="radio" name="membership" value="NP Membership"> NP Membership</label>
-                        <label class="sbs"><input type="radio" name="membership" value="Bronze Membership"> Bronze Membership</label>
-                        <label class="sbs"><input type="radio" name="membership" value="Silver Membership"> Silver Membership</label>
-                        <label class="sbs"><input type="radio" name="membership" value="Gold Membership"> Gold Membership</label>
-                    </fieldset>
-                    <p>Last updated: <span id="lastmod"></span></p>
-                    <input type="submit" value="Join the Commerce" class="submitBtn">
-                </form>
-            </div>
+    <main class="joinPage">
+        <form method="get" action="thankyou.html">
+            <fieldset>
+                <legend>Basic Information</legend> 
+            <label class="top">First Name* <input type="text" name="fname" required></label>
+            <label class="top">Last Name* <input type="text" name="lname" required></label>
+            <label class="top">Title <input type="text" name="title" pattern="[A-Za-z-\s]{7}"></label>
+            <label class="top">email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>  
+            <label class="top">Cell Phone* <input type="tel" name="phone" placeholder="1235551234" required></label>
+            <label class="top">Business Name <input type="text" name="busName" required></label>  
+            </fieldset>
+
+            <fieldset class="memLvl">
+                <legend>Membership Level</legend>
+               
+                <label class="sbs"><input type="radio" name="membership" value="np"> NP Membership
+                <p>As a non-profit business you get all the benefits of the chamber free of charge<br>Cost: $0.<br><br></p></label>
+            <label class="sbs"><input type="radio" name="membership" value="bronze">Bronze Membership
+            <p>Bronze Membership gives you access to special monthly training events held by the chamber.<br>Cost: $5/yr. <br><br></p></label> 
+            <label class="sbs"><input type="radio" name="membership" value="silver"> Silver Membership
+            <p>Silver membership gives you all the benefits of a bronze membership plus free advertizing on our homepage.<br>Cost: $10/yr. <br><br></p></label>
+            <label class="sbs"><input type="radio" name="membership" value="gold"> Gold Membership
+            <p>Gold membership gives you all the benefits of a silver membership plus access to monthly trainings sponsored by the chamber.<br>Cost: $15/yr. <br><br></p></label>
             
-        </main>
-        <footer>
-            <img src="images/saopaulo.jpeg" alt="Sao Paulo_logo" />
-            <div>
-              <p id="footer_title">Sao Paulo Chamber of Commerce</p>
-              <p>Avenida Paulista</p>
-            </div>
-            <div>
-              <p>saopaulochamberofcommorce.com</p>
-              <p>+1 (011) 222-3344</p>
-              <p>
-                <a
-                  href="images/google-maps.png"
-                  title="google maps icons"
-                  target="_blank"
-                  >Location Map</a
-                >
-              </p>
-            </div>
-            <div id="white_line"></div>
-          </footer>
-          <script src="scripts/currentdate.js"></script>
-          <script src="scripts/toggleMenu.js"></script>
-          <script src="scripts/windchill.js"></script>
-        </body>
-      </html>
+            
+            </fieldset>
+            <fieldset>
+                <legend>Your Business</legend>
+                <label class="textArea">
+                    <textarea id="busDesc" name="busDesc" rows="4" cols="50" maxlength="200" placeholder="Please provide a short description of your business here."></textarea>
+                </label>
+            </fieldset>
+            <input type="hidden" id="visitTime" name="visitTime" value="">
+
+            <input type="submit" value="Join the Chamber" class="submitBtn">    
+        </form>
+    </main>
+    
+</body>
+<footer>
+    <div>
+        <img src="images/cc-logo.webp" alt="Chamber Logo">
+        <p>
+            <strong>Ohio Chamber of Commerce</strong> <br>
+            100 Front St #200, Marietta, OH 45750<br>
+        </p>
+        <p>
+            info@mariettachamber.com<br>
+            (740) 373-5176<br>
+            <span><img src="images/mapicon.png" alt="map icon"></span>
+            <a
+                href="https://www.google.com/search?client=firefox-b-1-d&amp;q=100+Front+Street+Marietta%2C+Ohio+45750">
+                Location Map</a>
+        </p>
+    </div>
+    <div>
+        &copy; <span id="copyright"></span> | Marietta Ohio Chamber of Commerce | Douglas K. DeMille | WDD 230
+        Project | <span id="lastmodified"></span>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/lazyload.js"></script>
+
+</html>

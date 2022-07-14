@@ -1,0 +1,199 @@
+@media only screen and (min-width: 64rem) {
+    body {
+        max-width: 1400px;
+    }
+    nav ul {
+    display: flex;
+
+    ;
+    }
+
+    .smallView {
+        display: none;
+    }
+
+
+    #largeView {
+        
+        display: flex;
+        
+    }
+
+    #largeView ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin: auto;  
+         }
+
+    #largeView ul li a{
+        padding: .8rem 2vw;
+        flex: 0 0 auto;
+        text-decoration: none;
+        color: white;        
+    }
+
+    #largeView ul li a:hover{
+        background-color: rgba(255,255,255,.2)
+    }
+
+    .hamburgerBtn {
+        display: none;
+    }
+
+
+main {display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 230px 360px 1fr;
+    /*grid-template-rows:500px 500px 500px;*/
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+
+.event {margin: 10px;
+    grid-column: 1;
+    grid-row: 1;
+    height: 200px;
+}
+.hero {margin: 10px;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    height: 560px;
+    overflow: hidden;
+    padding-top: 0;
+    padding-left: 0;
+}
+
+.hero img {
+    height: 100%;
+    object-fit: cover;
+}
+.spotlight {margin: 10px;
+    grid-column: 3;
+    grid-row: 1 / span 3;
+    display: block;
+    padding: 0px;
+    padding-top: 10px;
+    height: auto;
+    
+    
+}
+
+
+.spotlight1, .spotlight2, .spotlight3 {
+    padding: 0px;
+    margin: 15px;
+    width: auto;
+    height: auto;
+    
+}
+
+.spotlight3 {
+    display: block;   
+}
+
+.spotlight hr {
+    margin: 4px;
+}
+
+.spotlight h2, .spotlight p {
+    margin: 10px;
+}
+.weather {margin: 10px;
+    grid-column: 1;
+    grid-row: 2;
+    height: 330px;
+}
+.join {
+    margin: 10px;
+    grid-column: 1;
+    grid-row: 3;
+    height: 200px; 
+}
+
+.news {margin: 10px;
+    grid-column: 2;
+    grid-row: 3;
+    height: 200px;}
+/*for discover page*/
+.discover {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-rows: none;
+}
+
+/*for join page*/
+.joinPage{
+    grid-template-rows: none;
+    width: 900px;
+}
+
+
+
+body > main > form > fieldset.memLvl > label:nth-child(2),
+body > main > form > fieldset.memLvl > label:nth-child(3),
+body > main > form > fieldset.memLvl > label:nth-child(4),
+body > main > form > fieldset.memLvl > label:nth-child(5){
+    display: flex;
+    align-content: flex-start;
+    width: 860px;
+}
+
+.sbs p {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0;
+    margin-inline-start: 50px;
+    margin-inline-end: 0px;
+    width: 650px;
+}
+
+
+.sbs input {
+    align-self: flex-start;
+    width: 50px;
+}
+
+
+label.sbs {
+    text-indent: 10px;
+}
+
+.sbs p {
+    align-self: flex-end;
+}
+body > main > form > fieldset.memLvl > label:nth-child(2) > p{
+    padding-left: 25px;}
+body > main > form > fieldset.memLvl > label:nth-child(4) > p {
+    padding-left: 10px;
+}
+body > main > form > fieldset.memLvl > label:nth-child(5) > p {
+    padding-left: 10px;
+}
+
+/* for directory page*/
+
+div.cards section {
+    margin: 5px;
+}
+/* for contact page*/
+.contactMain {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px 1fr;
+}
+.pointsOfContact {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    width: 75%;
+}
+
+.contactUs {
+    width: 75%;
+}
+
+.contactForm {
+    width: 75%;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 95%;
+}
+}
