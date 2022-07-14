@@ -1,94 +1,75 @@
-const requestInfo = "json/data.json";
+const requestURL = 'scripts/data.json';
+let cards = document.querySelector('.cards');
+let count = 0;
+let results = [];
 
-fetch(requestInfo)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (jsonObject) {
-        console.log(jsonObject);
-        const companies = jsonObject['companies']
-        console.log(companies);
-        //function to get filtered array
-        var filteredCos = [companies[2], companies[3], companies[6], companies[7]]
-        console.table(filteredCos);
+function displayMembers(busniess) {
+    // Create elements to add to the document
+    let card = document.createElement('section');
+    let img = document.createElement('img');
+    let url = document.createElement('a');
+    let name = document.createElement('h3');
+    let address = document.createElement('p');
+    let phone = document.createElement('p');
+    let membership = document.createElement('p');
 
-        //get 3 random companies from filtered array
-    ///1st company    
-        const randomCompany = getRandomCo(filteredCos);
-        console.log(randomCompany);
-           //find index of randomly selected company
-        const randomCompanyIndex = filteredCos.indexOf(randomCompany)
-        console.log(randomCompanyIndex);
-
-            //remove selected company from list so it doesn't repeat
-        filteredCos.splice(randomCompanyIndex, 1)
-        console.table(filteredCos)
-
-    ///2nd company    
-        const randomCompany1 = getRandomCo(filteredCos);
-        console.log(randomCompany1);
-
-           //find index of randomly selected company
-           const randomCompanyIndex1 = filteredCos.indexOf(randomCompany1)
-           console.log(randomCompanyIndex1);
-
-        filteredCos.splice(randomCompanyIndex1, 1)
-        console.table(filteredCos)
-    ///3rd company    
-        const randomCompany2 = getRandomCo(filteredCos);
-        console.log(randomCompany2);
-            //find index of randomly selected company
-           const randomCompanyIndex2 = filteredCos.indexOf(randomCompany2)
-           console.log(randomCompanyIndex2);
-
-        filteredCos.splice(randomCompanyIndex2, 1)
-        console.table(filteredCos)
-        
-    //functions to display random companies on page
-        //for spotlight 1
-        document.querySelector('.spotlight1 h2').textContent = `${randomCompany.name}`;
-            //for image
-        let img1 = document.querySelector('.spotlight1 img')
-        img1.setAttribute('src', randomCompany.imageName);
-        img1.setAttribute('alt', `Logo for ${randomCompany.name}`);
-        img1.setAttribute('loading', 'lazy');
-
-        document.querySelector('.spotlight1 .phone').textContent = `${randomCompany.phone}`;
-
-        document.querySelector('.spotlight1 .website').textContent = `${randomCompany.website}`;
+    // Build the image attributes by using the setAttribute method for the src, alt, and loading attribute values. (Fill in the blank with the appropriate variable).
+    img.setAttribute('src', busniess.imageurl);
+    img.setAttribute('alt', `logo of ${busniess.name}`);
+    img.setAttribute('loading', 'lazy');
     
-        // for spotlight2
-    
-        document.querySelector('.spotlight2 h2').textContent = `${randomCompany1.name}`;
+    // name, address and url of the busniess
+    name.textContent = `${busniess.name}`;
+    address.textContent = `${busniess.address}`;
+    phone.textContent = `${busniess.phone}`;
+    membership.textContent = `Membership Level: ${busniess.membership_level}`;
+    var linkText = document.createTextNode("Website");
+    url.appendChild(linkText);
+    url.title = "Website";
+    url.href = `${busniess.url}`;
 
-        let img2 = document.querySelector('.spotlight2 img')
-        img2.setAttribute('src', randomCompany1.imageName);
-        img2.setAttribute('alt', `Logo for ${randomCompany1.name}`);
-        img2.setAttribute('loading', 'lazy');
+    // Add/append the section(card) with the h2 element
+    card.appendChild(img);
+    card.appendChild(name);
+    card.appendChild(address);
+    card.appendChild(phone);
+    card.appendChild(membership);
+    card.appendChild(url);
+    card.setAttribute("id", `hide`);
 
-        document.querySelector('.spotlight2 .phone').textContent = `${randomCompany1.phone}`;
+    if (count == 8) {
+        return
+    } else if (count <= 7) {
+        if (busniess.membership_level == "Gold") {
+          card.setAttribute("class", "gold");
+          results[count] = cards.appendChild(card);
+          count = count + 1;
+        } else if (busniess.membership_level == "Silver") {
+          card.setAttribute("class", "silver");
+          results[count] = cards.appendChild(card);
+          count = count + 1;
+          }
+      }; 
+}
 
-        document.querySelector('.spotlight2 .website').textContent = `${randomCompany1.website}`;
+fetch(requestURL)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (jsonObject) {
+    const members = jsonObject['busniess'];
+    members.forEach(displayMembers);
 
-        //for spotlight3
-
-        document.querySelector('.spotlight3 h2').textContent = `${randomCompany2.name}`;
-
-        let img3 = document.querySelector('.spotlight3 img')
-        img3.setAttribute('src', randomCompany2.imageName);
-        img3.setAttribute('alt', `Logo for ${randomCompany2.name}`);
-        img3.setAttribute('loading', 'lazy');
-
-        document.querySelector('.spotlight3 .phone').textContent = `${randomCompany2.phone}`;
-
-        document.querySelector('.spotlight3 .website').textContent = `${randomCompany2.website}`;
-    })
-
-    
-    
-    
-    function getRandomCo(array) {
-        const randomIndex = Math.floor(Math.random() * array.length);
-        const comp = array[randomIndex];
-        return comp;
-    }
+    var randomItem = results[Math.floor(Math.random()*[results.length-1])];
+    randomItem.setAttribute("id", "show");
+    var randomItem2 = results[Math.floor(Math.random()*[results.length-1])];
+    while(randomItem == randomItem2) {
+        var randomItem2 = results[Math.floor(Math.random()*[results.length-1])];
+    };
+    randomItem2.setAttribute("id", "show");
+    var randomItem3 = results[Math.floor(Math.random()*[results.length-1])];
+    while(randomItem3 == randomItem2 || randomItem3 == randomItem) {
+        var randomItem3 = results[Math.floor(Math.random()*[results.length-1])];
+    };
+    randomItem3.setAttribute("id", "mid_only");
+});
