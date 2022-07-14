@@ -4,7 +4,7 @@ const weatherIcon = document.querySelector('#weather-icon');
 const wind_speed = document.getElementById("wind");
 var wind_chill = document.getElementById("wind_chill");
 const captionDesc = document.querySelector('figcaption');
-const url = 'https://api.openweathermap.org/data/2.5/weather?q=Provo&units=imperial&appid=26e68319cfd447b4254c6a56af730573'
+const url = 'https://api.openweathermap.org/data/2.5/weather?q=SaoPaulo&units=imperial&appid=4a560932da68c6d09051ac9825c6d318'
 
 function displayResults(weatherData) {
     currentTemp.innerHTML = `${weatherData.main.temp.toFixed(0)}`;
