@@ -1,255 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sao Paulo Chamber of Commerce</title>
-    <link rel="shortcut icon" href="favicon.ico">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/small.css" rel="stylesheet">
-    <link href="css/medium.css" rel="stylesheet">
-    <link href="css/large.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-    <header>
-        <div class='classInvite'>&#x1F91D; Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</div>
-        <div class="headerWrapper">
-            <img class="headerLogo" src="images/favicon_io/favicon-32x32.png" alt="sao_paulo_logo" />
-            <h1 id="page_title">Sao Paulo</h1>
-                <p>Chamber of Commerce</p>
-                
-                <nav id="largeView">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="discover.html">Discover</a></li>
-                        <li><a href="directory.html">Directory</a></li>
-                        <li><a href="join.html">Join</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            <a class="social" href="https://www.facebook.com"><img src="images/facebook_logo.png" alt="facebook_logo" />
-            <a  class="social" href="https://www.linkedin.com"><img src="images/linkedin_logo.png" alt="linkedin_logo" /></a>
-            <button class="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+    <meta
+      name="description"
+      content="The history, demographics, and other information about Sao Paulo, Brazil."
+    />
+    <title>Sao Paulo | Sao Paulo Brazil Chamber of Commerce</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!--normalize CSS reference-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <!--stylesheets references-->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/medium.css" />
+    <link rel="stylesheet" href="css/large.css" />
+    <!--fonts links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="banner" id="banner" style="display: none">
+      <p>
+        🤝🏼 Come join us for the Chamber meet and greet Wednesday at 7:00 p.m.
+      </p>
+    </div>
+    <div class="content">
+      <header>
+        <div class="logo">
+          <a href="index.html"
+            ><img src="images/saopaulo_bridge.jpeg" alt="Sao Paulo Logo"
+          /></a>
         </div>
-            <nav class="smallView">
-                <ul class="navigation">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="join.html">Join</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        
-        <div id="date"></div>
+        <div class="chamberName">
+          <h1>Sao Paulo</h1>
+          <h2>Chamber of Commerce</h2>
+        </div>
+        <div class="social">
+          <a href="https://twitter.com" target="blank"
+            ><img src="images/twitter.png" alt="Twitter Link"
+          /></a>
+          <a href="https://facebook.com" target="blank"
+            ><img src="images/facebook.png" alt="Facebook Link"
+          /></a>
+        </div>
+        <span id="date"></span>
+        <nav>
+          <button id="hamburguerButton">
+            <span>&#9776;</span><span>X</span>
+          </button>
+          <ul id="navBar">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    </header>
-
-    <main>
+      <main>
         <div class="hero">
-            <picture>
-                <!--<source srcset="images/wdd230Medium.jpg" media="(min-width: 36rem) and (max-width: 64rem)">
-                <source srcset="images/wdd230Large.jpg" media="(min-width: 64rem)">
-                <img src="images/wdd230Small.jpg" alt="test hero image wk6">-->
-                <img src="images/wdd230-org400.jpg" alt="Picture of town">
-            </picture>
-            
-            <p class="welcome">Welcome to Sao Paulo</p>
-            <p class="actionCall"><a href="join.html">Join the Chamber</a></p>
-
-
-<<<<<<< HEAD
+          <picture class="hero-image">
+            <source media="(max-width: 637px)" srcset="images/" />
+            <source
+              media="(max-width: 1167px)"
+              srcset="images/heromedium.jpg"
+            />
+            <source media="(max-width: 1500px)" srcset="images/herolarge.jpg" />
+            <img src="images/heromedium.png" alt="Cristal Clear Lake photo" />
+          </picture>
+          <h2><strong>Welcome to Sao Paulo</strong></h2>
+          <a href="join.html"
+            ><button id="joinButton">Join the Chamber</button></a
+          >
         </div>
         <div class="event">
-            <h2>Ribbon Cutting</h2>
-            <h3>&#x1F48E; The Diamond Shack</h3>
-            <p>Join us for the Grand Opening of The Diamond Shack, Thursday at 1:00 p.m. <br><a href='#'>more info...</a></p>
+          <h2>Ribbon Cutting</h2>
+          <h3><strong>Formula 1</strong></h3>
+          <p>
+            Join us for the FORMULA 1 HEINEKEN GRANDE PRÊMIO DE SÃO PAULO 2022 ,
+            Friday at 4:00 p.m. <a href="#"> more info...</a>
+          </p>
         </div>
         <div class="weather">
-            <h2>Weather</h2>
-            
-            <img id="weatherIcon" src="images/weatherhirez.jpg" alt="weather icon">
-            
-            <h3><span id="temp"></span> &#x00b0; F</h3>
-            <h3 id="condition">Partly Cloudy</h3>
-            <hr>
-            <p>Wind Speed: <span id="windSpeed"></span> mph <br>
-            Wind Chill: <span id="windChill"></span> &#x00b0 F</p>
+          <div class="weather-container-grid">
+            <section class="weather">
+              <h2>Weather</h2>
+              <div class="weather-grid">
+                <div class="weather-temperature">
+                  <div><span class="temperature"></span>&#176;F</div>
+                  <p>Current Temp</p>
+                </div>
+                <div class="weather-humidity">
+                  <div><span class="humidity"></span>%</div>
+                  <p>Humidity</p>
+                </div>
+              </div>
+              <div class="weather-condition">
+                <span class="condition"></span>
+              </div>
+            </section>
+          </div>
         </div>
         <div class="news">
-            <h2>News Release</h2>
-            <p>Number 1 in consumer market: with 45 million inhabitants, São Paulo is the most populous and wealthy state of Brazil, concentrating the 4th largest consumer market in Latin America, behind only Brazil as a whole, Mexico and Colombia. The greatest strength of the Brazilian consumer market lies in the inland cities of the state of São Paulo. </p>
+          <h2>News Release</h2>
+          <h3>Japan and Brazil linked by soccer, baseball and immigration</h3>
+          <p>
+            Brazil's national soccer team is a draw wherever it plays, often a
+            sentimental choice. The affection will run deeper for some in Japan
+            when the countries play Monday in Tokyo with both headed to the
+            World Cup in Qatar.
+          </p>
         </div>
-        <div class="spotlight">
-            <div class="spotlight1">
-                <h2>Choose São Paulo, the right destination for your investment</h2>
-                <img src="images/sao_paulo_news.jpeg" alt = "City Of Sao Paulo">
-                <hr>
-                <p class="phone"></p>
-                <p class="website">https://www.en.investe.sp.gov.br/why-sao-paulo/</p>
+        <div class="spotlights">
+          <div class="transport">
+            <div class="contact1">
+              <h2 class="spot1H2">AS Transport and Tourism</h2>
+              <img
+                class="spot1img"
+                src="images/transnportation.jpeg"
+                alt="spotlight1"
+              />
+              <!-- <p class="spot1p"><em>"Helping The World to Keep Promises!"</em></p> -->
+              <p class="spot1phone">+55 11 2902-8888</p>
+              <p class="spot1email">contact@astransport.com</p>
             </div>
-            <div class="spotlight2">
-                <h2>A new model for brain research</h2>
-                <img src="images/brain_studies.png" alt = "Brain research">
-                <hr>
-                <p class="phone"></p>
-                <p class="website"></p>
+          </div>
+          <div class="dance">
+            <div class="contact2">
+              <h2 class="spot2H2"><span>Lambada Dance!</span></h2>
+              <img
+                class="spot2img"
+                src="images/lambada_dance.jpeg"
+                alt="spotlight2"
+              />
+              <!-- <p class="spot2p"><em>"An after school dance institution."</em></p> -->
+              <p class="spot2phone">+11 98138-0273</p>
+              <p class="spot2email">conctact@Lambadadance.com</p>
             </div>
-            <div class="spotlight3">
-                <h2></h2>
-                <img src="" alt = "">
-                <hr>
-                <p class="phone"></p>
-                <p class="website"></p>
+          </div>
+          <div class="bike-agency">
+            <div class="contact3">
+              <h2 class="spot3H2"><span id="pink-bike">To the top</span></h2>
+              <img
+                class="spot3img"
+                src="images/mountain-bike.jpeg"
+                alt="spotlight3"
+              />
+              <!-- <p class="spot3p"><em>"Bike shop"</em></p> -->
+              <p class="spot3phone">+591 777-77-77</p>
+              <p class="spot3email">contact@tothetop.com</p>
             </div>
+          </div>
         </div>
         <div class="join">
-            <h2><a href="join.html">Join Us!</a></h2>
-            <p>Discover how to join the chamber of commerce and how it will benefit your organization!</p>
+          <span
+            ><a href="join.html"
+              ><button id="join2button">Join Us!</button></a
+            ></span
+          >
+          <p>
+            Discover how to join the chamber of commerce and how it will benefit
+            your organization!
+          </p>
         </div>
-        <input type="hidden" id="visitTime" name="visitTime" value="">
-=======
-        <p>
-          The goal of Sao Paulo Chamber of Commerce aims to promote trade
-          relations between Brazilian companies, with particular emphasis on São
-          Paulo state-based companies, and the rest of the world.
-        </p>
-        <p>
-          Mission:<br>
-            As the SPCC foreign trade department, the São Paulo Chamber of
-            Commerce's main objectives are as follows:<br />
-          <br>
-          -To facilitate and promote the access of foreign companies into the
-          Brazilian market<br />
-          -To offer business opportunities to companies<br />
-          -To empower foreign companies to operate within a competitive
-          market<br />
-          -To build a network of international cooperation with business
-          entities worldwide
-        </p>
-        <p>
-          Vision:<br>
-          Committed to becoming a national and international reference in
-          supporting businesses between Brazilian and foreign companies by
-          providing high quality products and services.
-        </p>
-      </div>
-      <div>
-        <h2>Event</h2>
-        <p>
-          The goal of Sao Paulo Chamber of Commerce aims to promote trade
-          relations between Brazilian companies, with particular emphasis on São
-          Paulo state-based companies, and the rest of the world.
-        </p>
-      </div>
-      <div id="weather">
-        <h2>Weather</h2>
-        <figure>
-            <img src="" alt="" id="weather-icon" />
-            <figcaption></figcaption>
-        </figure>
-        <p id="current-tempPa"><span id="current-temp"></span> &deg;F</p>
-        <div id="wind-data">
-            <p id="wind"></p>
-            <p id="wind_chill"></p>
+      </main>
+      <footer>
+        <div class="address">
+          <a href="index.html"
+            ><img src="images/saopaulo_bridge.jpeg" alt="Sao Paulo Logo"
+          /></a>
+          <p><strong>Sao Paulo Chamber of Commerce</strong></p>
+          <p>Av. Paulista, 1578 - Bela Vista</p>
+          <p>São Paulo - SP, Brazil</p>
         </div>
-    </div> 
-    <div>
-        <h2>News Release</h2>
-        <p>The goal of Provo Chamber of Commerce is to help to further the interests of small businesses in a local area. The activities can range from hosting events, to lobbying local representatives to charitable works for the betterment of the community. As a small business owner it is imperative that you network. The Chamber of Commerce gives you the opportunity to meet with other local business owners and network. Of course they also present business owners in a positive light to the community. </p>
-    </div> 
+        <div class="contact">
+          <p>info@spchamber.org</p>
+          <p>+1 (702) 504-4388</p>
+          <a href="https://maps.google.com/maps?q=Sao+Paulo" target="blank"
+            >🗺️ Location Map</a
+          >
+        </div>
 
-      <div>
-        <h2>Weather</h2>
-        <span id="temp"></span>
-        <span id="wind"></span>
-        <p id="wind_chill"></p>
-      </div>
-      <div>
-        <h2>News Release</h2>
-        <p>
-          The goal of Sao Paulo Chamber of Commerce aims to promote trade
-          relations between Brazilian companies, with particular emphasis on São
-          Paulo state-based companies, and the rest of the world.
-        </p>
-      </div>
-      <div>
-        <h2>Spotlight1</h2>
-        <p>
-          The goal of Sao Paulo Chamber of Commerce aims to promote trade
-          relations between Brazilian companies, with particular emphasis on São
-          Paulo state-based companies, and the rest of the world.
-        </p>
-        <h2>Spotlight2</h2>
-        <p>
-          The goal of Sao Paulo Chamber of Commerce aims to promote trade
-          relations between Brazilian companies, with particular emphasis on São
-          Paulo state-based companies, and the rest of the world.
-        </p>
-        <h2 class="large_only">Spotlight3</h2>
-        <p class="large_only">
-          The goal of Sao Paulo Chamber of Commerce aims to promote trade
-          relations between Brazilian companies, with particular emphasis on São
-          Paulo state-based companies, and the rest of the world.
-        </p>
-      </div>
-      <div class="mid_only">
-        <h2>Join</h2>
-        <p>
-          The goal of Sao Paulo Chamber of Commerce aims to promote trade
-          relations between Brazilian companies, with particular emphasis on São
-          Paulo state-based companies, and the rest of the world.
-        </p>
-      </div>
->>>>>>> d86943d7385f52dc6422850d83fe71c63160db0f
-    </main>
-    <footer>
-        <div>
-            <img src="images/cc-logo.webp" alt="Chamber Logo">
-            <p>
-                <strong>Ohio Chamber of Commerce</strong> <br>
-                100 Front St #200, Marietta, OH 45750<br>
-            </p>
-            <p>
-                info@mariettachamber.com<br>
-                (740) 373-5176<br>
-                <span><img src="images/mapicon.png" alt="map icon"></span>
-                <a
-                    href="https://www.google.com/search?client=firefox-b-1-d&amp;q=100+Front+Street+Marietta%2C+Ohio+45750">
-                    Location Map</a>
-            </p>
+        <div class="myInfo">
+          <p>&copy;<span id="currentyear"></span> Sao Paulo Chamber</p>
+          <p><strong> Lourenco Da Silva </strong></p>
+          <p>WDD 230 Project</p>
+          <a href="https://openweathermap.org/" target="blank"
+            >https://openweathermap.org/</a
+          >
+          <p>
+            <span id="lastinfo"
+              >Last Modification: <span id="lastmodified"></span
+            ></span>
+          </p>
+          <div class="visitdays">
+            <p><span id="container"></span></p>
+          </div>
         </div>
-        <div>
-            &copy; <span id="copyright"></span> | Marietta Ohio Chamber of Commerce | Douglas K. DeMille | WDD 230
-            Project | <span id="lastmodified"></span><br>Weather data from <a href="https://www.openweathermap.org">OpenWeatherMap.org</a>
-        </div>
-    </footer>
-<<<<<<< HEAD
-
-    <script src="js/script.js"></script>
-    <script src="js/windchill.js"></script>
-    <script src="js/spotlight.js"></script>
-</body>
-
-=======
-    <script src="scripts/currentdate.js"></script>
-    <script src="scripts/toggleMenu.js"></script>
-    <script src="scripts/weatherapi.js"></script>
-    <script src="scripts/spotlight.js"></script>
-    <script src="scripts/close_banner.js"></script>
+      </footer>
+      <!-- java reference -->
+      <script src="js/index.js"></script>
+      <script src="js/windchill.js"></script>
+      <script src="js/lazyload.js" defer></script>
+      <script src="js/spotlights.js"></script>
+    </div>
   </body>
->>>>>>> d86943d7385f52dc6422850d83fe71c63160db0f
 </html>
-
-<!--Credits:
-photo of town: https://unsplash.com/photos/kn5i4gUyhYM
-weather icon: http://clipart-library.com/clipart/8TGbkje9c.htm
-truck: http://clipart-library.com/clip-art/2-24264_car-semi-trailer-truck-tractor-trailer-truck-clipart.htm
-treehouse: http://clipart-library.com/clipart/pcq8qrdEi.htm
-pencils: http://clipart-library.com/clipart/859399.htm-->

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The history, demographics, and other information about Sao Paulo, Brazil."
+    />
+    <title>Sao Paulo | Sao Paulo Brazil Chamber of Commerce</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!--normalize CSS reference-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <!--stylesheets references-->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/medium.css" />
+    <link rel="stylesheet" href="css/large.css" />
+    <!--fonts links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="banner" id="banner" style="display: none">
+      <p>
+        🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.
+      </p>
+    </div>
+    <div class="content">
+      <header>
+        <div class="logo">
+          <a href="index.html"
+            ><img src="images/saopaulo_bridge.jpeg" alt="Sao Paulo Logo"
+          /></a>
+        </div>
+        <div class="chamberName">
+          <h1>Sao Paulo</h1>
+          <h2>Chamber of Commerce</h2>
+        </div>
+        <div class="social">
+          <a href="https://twitter.com" target="blank"
+            ><img src="images/twitter.png" alt="Twitter Link"
+          /></a>
+          <a href="https://facebook.com" target="blank"
+            ><img src="images/facebook.png" alt="Facebook Link"
+          /></a>
+        </div>
+        <span id="date"></span>
+        <nav>
+          <button id="hamburguerButton">
+            <span>&#9776;</span><span>X</span>
+          </button>
+          <ul id="navBar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li class="active"><a href="join.html">Join</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="thankMain">
+        <h1>Sao Paulo Chamber of Commerce</h1>
+        <h2>Request Received!</h2>
+        <p>
+          Thank you for filling out Sao Paulo membership application. We will
+          process your information and contact you soon.
+        </p>
+      </main>
+      <footer>
+        <div class="address">
+          <a href="index.html"
+            ><img src="images/saopaulo_bridge.jpeg" alt="Sao Paulo Logo"
+          /></a>
+          <p><strong>Sao Paulo Chamber of Commerce</strong></p>
+          <p>Av. Paulista, 1578 - Bela Vista</p>
+          <p>São Paulo - SP, Brazil</p>
+        </div>
+        <div class="contact">
+          <p>info@spchamber.org</p>
+          <p>+1 (702) 504-4388</p>
+          <a href="https://maps.google.com/maps?q=Sao+Paulo" target="blank"
+            >🗺️ Location Map</a
+          >
+        </div>
+
+        <div class="myInfo">
+          <p>&copy;<span id="currentyear"></span> Sao Paulo Chamber</p>
+          <p><strong> Lourenco Da Silva </strong></p>
+          <p>WDD 230 Project</p>
+          <a href="https://openweathermap.org/" target="blank"
+            >https://openweathermap.org/</a
+          >
+          <p>
+            <span id="lastinfo"
+              >Last Modification: <span id="lastmodified"></span
+            ></span>
+          </p>
+          <div class="visitdays">
+            <p><span id="container"></span></p>
+          </div>
+        </div>
+      </footer>
+      <!-- java reference -->
+      <script src="js/index.js"></script>
+      <!-- <script src="js/windchill.js"></script> -->
+      <script src="js/lazyload.js" defer></script>
+    </div>
+  </body>
+</html>

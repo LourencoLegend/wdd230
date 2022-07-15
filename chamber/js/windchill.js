@@ -1,80 +1,121 @@
-/*This is to use the weather API */
-const tempIn = document.querySelector("#temp");
+//#region Weather API
+const weatherapiURL =
+  "https://api.openweathermap.org/data/2.5/onecall?lat=-23.5475&lon=-46.6361&exclude=&appid=4a560932da68c6d09051ac9825c6d318";
 
-const condition  = document.querySelector("#condition");
-const weatherIcon = document.querySelector("#weatherIcon");
-const windSpeedIn = document.querySelector("#windSpeed");
+fetch(weatherapiURL)
+  .then((response) => response.json())
+  .then((jsonObject) => {
+    const temperature = document.querySelector(".temperature");
+    temperature.textContent = Math.round(jsonObject.current.temp);
 
-const url = "https://api.openweathermap.org/data/2.5/weather?id=4517586&appid=00ea60318b73a6283c6a3e0101a40d75&units=imperial"
+    const condition = document.querySelector(".condition");
+    condition.textContent = jsonObject.current.weather[0].description;
 
-async function apiFetch() {
-    try {
-        const response = await fetch(url);
-        if (response.ok) {
-            const data = await response.json();
-            console.log(data); //to test the call
-            displayResults(data);
-            allWindChill(tempIn, windSpeedIn);
-        } else {
-            throw Error(await response.text());
-        }
-    } catch (error) {
-        console.log(error);
+    const humidity = document.querySelector(".humidity");
+    humidity.textContent = jsonObject.current.humidity;
+
+    //#region Forecast
+    Object.keys(jsonObject.daily)
+      .slice(1, 4)
+      .forEach((i) => {
+        let forecastdate = new Date(jsonObject.daily[i].dt * 1000);
+
+        let flexcol = document.createElement("div");
+        flexcol.classList.add("flex-col");
+
+        let col_head_span = document.createElement("span");
+        col_head_span.classList.add("col-head");
+        col_head_span.textContent = forecastdate.toLocaleString("default", {
+          weekday: "short",
+        });
+        flexcol.appendChild(col_head_span);
+
+        let weather_info_div = document.createElement("div");
+        weather_info_div.classList.add("weather-info");
+        flexcol.appendChild(weather_info_div);
+
+        let img = document.createElement("img");
+        img.setAttribute(
+          "src",
+          `images/${jsonObject.daily[i].weather[0].icon}.png`
+        );
+        img.setAttribute(
+          "alt",
+          `Icon depicting ${jsonObject.daily[i].weather[0].description} in Boise, Idaho`
+        );
+        img.setAttribute("loading", "lazy");
+        img.setAttribute("height", "128");
+        img.setAttribute("width", "128");
+        weather_info_div.appendChild(img);
+
+        let data_span = document.createElement("span");
+        data_span.classList.add("data");
+        data_span.innerHTML = `${Math.round(
+          jsonObject.daily[i].temp.day
+        )}&#176;F`;
+        weather_info_div.appendChild(data_span);
+
+        document.querySelector("div.flex").appendChild(flexcol);
+      });
+    //#endregion
+
+    //#region Weather Alerts
+    if (jsonObject.alerts) {
+      Object.keys(jsonObject.alerts).forEach((i) => {
+        let banner = document.createElement("section");
+        banner.classList.add("weather-alert");
+
+        let button = document.createElement("button");
+        button.setAttribute("type", "button");
+        button.innerHTML = "&times;";
+        button.classList.add("close-button");
+        button.addEventListener("click", () => {
+          banner.remove("weather-alert");
+        });
+
+        let title = document.createElement("h2");
+        title.textContent = jsonObject.alerts[i].event;
+
+        let description = document.createElement("p");
+        description.style.display = "none";
+        description.textContent = jsonObject.alerts[i].description;
+        description.textContent = description.textContent.replaceAll(
+          "...",
+          " - "
+        );
+        description.innerHTML = description.innerHTML.replaceAll(
+          "*",
+          "<br><br>"
+        );
+
+        let showbutton = document.createElement("button");
+        showbutton.setAttribute("type", "button");
+        showbutton.innerHTML = "Show Details &#9651;";
+        showbutton.classList.add("show-button");
+        showbutton.addEventListener("click", () => {
+          if (description.style.display == "none") {
+            description.style.display = "block";
+            showbutton.innerHTML = "Show Details &#9661;";
+          } else {
+            description.style.display = "none";
+            showbutton.innerHTML = "Show Details &#9651;";
+          }
+        });
+
+        banner.appendChild(button);
+        banner.appendChild(title);
+        banner.appendChild(showbutton);
+        banner.appendChild(description);
+
+        const body = document.querySelector("body");
+        body.prepend(banner);
+      });
+    } else {
+      bannerClass = document.querySelector("weather-alert");
+      if (bannerClass) {
+        banner.remove("weather-alert");
+      }
     }
-}
-apiFetch();
-
-function displayResults(weatherData) {
-    tempIn.innerHTML = `<strong>${weatherData.main.temp.toFixed(0)}</strong>`;
-    //tempIn.innerHTML = `5`
-    windSpeedIn.innerHTML = `${weatherData.wind.speed}`;
-    //windSpeedIn.innerHTML = `20`
-    const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
-    const desc = weatherData.weather[0].description;
-    
-    //to capatilize each word in the description:
-    const words = desc.split(" ");
-    for (let i = 0; i <words.length; i++) {
-        words[i] = words[i][0].toUpperCase() + words[i].substring(1);}
-    //must put it into a different variable bc .join doesn't change the original array.
-    let formattedWords = words.join(' ');
-
-    weatherIcon.setAttribute('src', iconsrc);
-    weatherIcon.setAttribute('alt', formattedWords);
-    condition.textContent = formattedWords;
-  }
-
-
-
-/*The following is to calculate the windchill*/
-/*Get the temp from the page and make it into a number*/
-//var temp = parseFloat(document.querySelector('#temp').textContent)
-//console.log(temp)
-
-/*Get the windSpeed from the page and make it into a number*/
-//var windSpeed = parseFloat(document.querySelector('#windSpeed').textContent)
-//console.log(windSpeed)
-
-//function for all of the functions of calculating and displaying windchill:
-function allWindChill (tempIn, windSpeedIn) {
-/*define a function to calculat the windSpeed*/
-function calcWindChill(tempIn, windSpeedIn){
-
-    var windChill = 35.74 + 0.6215*tempIn - (35.75*windSpeedIn**0.16) + 0.4275 * tempIn * windSpeedIn**0.16
-    return windChill
-}
-
-/*call the function and round the result if conditions are met, else give 'NA'*/
-var f = ''
-if (parseFloat(tempIn.innerText) <= 50 && parseFloat(windSpeedIn.innerText) >= 3) {f = roundToTwo(calcWindChill(parseFloat(tempIn.innerText), parseFloat(windSpeedIn.innerText)))}
-else {f = "N/A"}
-console.log(f)
-
-/*function to accurately round a number to two decimals*/
-function roundToTwo(num) {
-    return +(Math.round(num + "e+2")  + "e-2");
-}
-
-/*place the wind chill number or NA on the page as needed.*/
-document.querySelector('#windChill').textContent = f
-}
+    //#endregion
+  });
+//#endregion
