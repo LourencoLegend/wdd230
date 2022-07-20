@@ -67,18 +67,21 @@
       </header>
 
       <main>
-        <div id="hero">   
-          <picture>
-              <source media="(min-width:57em)" srcset="images/heromedium.png">
-              <source media="(min-width:28em)" srcset="images/herosmall.png">
-              <img src="images/herooriginal.png" alt="Hero Image">
+        <div class="hero">
+          <picture class="hero-image">
+            <source media="(max-width: 300px)" srcset="images/herosmall.png" />
+            <source
+              media="(max-width: 700px)"
+              srcset="images/heromedium.jpg"
+            />
+            <source media="(max-width: 1500px)" srcset="images/herolarge.jpg" />
+            <img src="images/hero.png" alt="Hero" />
           </picture>
-          <section class="heroSection">
-              <h2>Spanish Fork Chamber of Commerce</h2>
-              <p><span id="name">The best place to live and work</span></p>
-          </section>
-          <!--<button type="submit" id="add">Join the Chamber</button>-->
-  </div>
+          <h2><strong>Welcome to Sao Paulo</strong></h2>
+          <a href="join.html"
+            ><button id="joinButton">Join the Chamber</button></a
+          >
+        </div>
         <div class="event">
           <h2>Ribbon Cutting</h2>
           <h3><strong>Formula 1</strong></h3>
@@ -87,28 +90,26 @@
             Friday at 4:00 p.m. <a href="#"> more info...</a>
           </p>
         </div>
-
-        
-        <section id="weather" class="placeholder">
-          <h3>Weather</h3>
-          <div>
-            <figure>
-              <img
-                src="images/weather/icons8-partly-cloudy-53.png"
-                alt="image of current weather conditions, Partly Cloudy icon by Icons8"
-                id="textImg"
-              />
-              <figcaption id="tempConditions"></figcaption>
-            </figure>
-            <h4 id="temp">33°C</h4>
-            <h4 id="windSpeed">Wind Speed:</h4>
-            <h4 id="windSpeedH4">2.5 km/h</h4>
-            <h4 id="windChill">Wind Chill:</h4>
-            <h4 id="windChillH4">N/A</h4>
+        <div class="weather">
+          <div class="weather-container-grid">
+            <section class="weather">
+              <h2>Weather</h2>
+              <div class="weather-grid">
+                <div class="weather-temperature">
+                  <div><span class="temperature"></span>&#176;F</div>
+                  <p>Current Temp</p>
+                </div>
+                <div class="weather-humidity">
+                  <div><span class="humidity"></span>%</div>
+                  <p>Humidity</p>
+                </div>
+              </div>
+              <div class="weather-condition">
+                <span class="condition"></span>
+              </div>
+            </section>
           </div>
-          <hr />
-        </section>
-
+        </div>
         <div class="news">
           <h2>News Release</h2>
           <h3>Japan and Brazil linked by soccer, baseball and immigration</h3>
