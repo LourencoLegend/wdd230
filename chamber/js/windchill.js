@@ -18,7 +18,7 @@ fetch(weatherapiURL)
     Object.keys(jsonObject.daily)
       .slice(1, 4)
       .forEach((i) => {
-        let forecastdate = new Date(jsonObject.daily[i].dt * 1000);
+        let forecastdate = new Date(jsonObject.daily[i].dt * 100);
 
         let flexcol = document.createElement("div");
         flexcol.classList.add("flex-col");
@@ -41,7 +41,7 @@ fetch(weatherapiURL)
         );
         img.setAttribute(
           "alt",
-          `Icon depicting ${jsonObject.daily[i].weather[0].description} in Boise, Idaho`
+          `Icon depicting ${jsonObject.daily[i].weather[0].description} in Sao Paulo, Brazil`
         );
         img.setAttribute("loading", "lazy");
         img.setAttribute("height", "128");
