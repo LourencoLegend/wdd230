@@ -1,121 +1,104 @@
-//#region Weather API
-const weatherapiURL =
-  "https://api.openweathermap.org/data/2.5/onecall?lat=-23.5475&lon=-46.6361&exclude=&appid=4a560932da68c6d09051ac9825c6d318";
+const lat = 44.6584;
+const lng = -111.1005;
 
-fetch(weatherapiURL)
-  .then((response) => response.json())
-  .then((jsonObject) => {
-    const temperature = document.querySelector(".temperature");
-    temperature.textContent = Math.round(jsonObject.current.temp);
+const params = "airTemperature,windSpeed";
 
-    const condition = document.querySelector(".condition");
-    condition.textContent = jsonObject.current.weather[0].description;
+let weatherData = {};
 
-    const humidity = document.querySelector(".humidity");
-    humidity.textContent = jsonObject.current.humidity;
+// const url = `https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${params}`, {
+//   headers: {
+//     'Authorization': 'example-api-key'
+//   };
 
-    //#region Forecast
-    Object.keys(jsonObject.daily)
-      .slice(1, 4)
-      .forEach((i) => {
-        let forecastdate = new Date(jsonObject.daily[i].dt * 100);
+// async function getWindSpeed(url) {
+//   const response = await fetch(url);
 
-        let flexcol = document.createElement("div");
-        flexcol.classList.add("flex-col");
+//   if(response.ok) {
+//     const data = await response.json();
+//     console.log(data);
+//   }
+// }
 
-        let col_head_span = document.createElement("span");
-        col_head_span.classList.add("col-head");
-        col_head_span.textContent = forecastdate.toLocaleString("default", {
-          weekday: "short",
-        });
-        flexcol.appendChild(col_head_span);
+// *Using the Stormglass API to get current weather status
+// fetch(
+//   `https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${params}`,
+//   {
+//     headers: {
+//       Authorization:
+//         "e186e4f0-dd6e-11ec-bcd6-0242ac130002-e186e55e-dd6e-11ec-bcd6-0242ac130002",
+//     },
+//   }
+// )
+//   .then((response) => response.json())
+//   .then((jsonData) => {
+//     weatherData = jsonData;
+//     console.log(weatherData);
 
-        let weather_info_div = document.createElement("div");
-        weather_info_div.classList.add("weather-info");
-        flexcol.appendChild(weather_info_div);
+//     output(weatherData);
+//   });
 
-        let img = document.createElement("img");
-        img.setAttribute(
-          "src",
-          `images/${jsonObject.daily[i].weather[0].icon}.png`
-        );
-        img.setAttribute(
-          "alt",
-          `Icon depicting ${jsonObject.daily[i].weather[0].description} in Sao Paulo, Brazil`
-        );
-        img.setAttribute("loading", "lazy");
-        img.setAttribute("height", "128");
-        img.setAttribute("width", "128");
-        weather_info_div.appendChild(img);
+// **For debugging without Stormglass API
+const output = () => {
+  // *Using the Stormglass API
+  // const output = (data) => {
+  // **For debugging without Stormglass API
+  const tempC = 6.96;
+  const windSpeedMps = 5.73;
 
-        let data_span = document.createElement("span");
-        data_span.classList.add("data");
-        data_span.innerHTML = `${Math.round(
-          jsonObject.daily[i].temp.day
-        )}&#176;F`;
-        weather_info_div.appendChild(data_span);
+  // *Using the Stormglass API
+  // const windSpeedMps = data.hours[0].windSpeed.noaa;
+  // const tempC = data.hours[0].airTemperature.noaa;
 
-        document.querySelector("div.flex").appendChild(flexcol);
-      });
-    //#endregion
+  // const windSpeedKph = windSpeedMpsToKph(windSpeedMps);
+  const tempF = tempCtoF(tempC);
+  const windSpeedMph = windSpeedMpsToMph(windSpeedMps);
 
-    //#region Weather Alerts
-    if (jsonObject.alerts) {
-      Object.keys(jsonObject.alerts).forEach((i) => {
-        let banner = document.createElement("section");
-        banner.classList.add("weather-alert");
+  document.querySelector("#temp").textContent = `${tempF.toFixed(0)} °F`;
+  document.querySelector("#windSpeedH4").textContent = `${windSpeedMph.toFixed(
+    2
+  )} mph`;
 
-        let button = document.createElement("button");
-        button.setAttribute("type", "button");
-        button.innerHTML = "&times;";
-        button.classList.add("close-button");
-        button.addEventListener("click", () => {
-          banner.remove("weather-alert");
-        });
+  let windChillH4 = document.querySelector("#windChillH4");
+  windChillH4.textContent = getWindChill(windSpeedMph, tempF);
+};
 
-        let title = document.createElement("h2");
-        title.textContent = jsonObject.alerts[i].event;
+// Define the windSpeedMpsToMph function
+const windSpeedMpsToMph = (mps) => mps / 0.44704;
 
-        let description = document.createElement("p");
-        description.style.display = "none";
-        description.textContent = jsonObject.alerts[i].description;
-        description.textContent = description.textContent.replaceAll(
-          "...",
-          " - "
-        );
-        description.innerHTML = description.innerHTML.replaceAll(
-          "*",
-          "<br><br>"
-        );
+// Define the windSpeedMpsToKph function
+const windSpeedMpsToKph = (mps) => mps * 3.6;
 
-        let showbutton = document.createElement("button");
-        showbutton.setAttribute("type", "button");
-        showbutton.innerHTML = "Show Details &#9651;";
-        showbutton.classList.add("show-button");
-        showbutton.addEventListener("click", () => {
-          if (description.style.display == "none") {
-            description.style.display = "block";
-            showbutton.innerHTML = "Show Details &#9661;";
-          } else {
-            description.style.display = "none";
-            showbutton.innerHTML = "Show Details &#9651;";
-          }
-        });
+// Convert km/h to mph
+// const kphToMph = (kph) => kph * 0.621371;
 
-        banner.appendChild(button);
-        banner.appendChild(title);
-        banner.appendChild(showbutton);
-        banner.appendChild(description);
+// Convert mph to km/h
+// const mphToKph = (mph) => mph / 0.621371;
 
-        const body = document.querySelector("body");
-        body.prepend(banner);
-      });
-    } else {
-      bannerClass = document.querySelector("weather-alert");
-      if (bannerClass) {
-        banner.remove("weather-alert");
-      }
-    }
-    //#endregion
-  });
-//#endregion
+// Convert Celsius to Fahrenheit
+const tempCtoF = (cel) => cel * 1.8 + 32;
+
+// Convert Fahrenheit to Celsius
+const tempFtoC = (fahr) => (fahr - 32) / 1.8;
+
+// Calculate the Wind Chill Factor
+const getWindChill = (mph, temp) => {
+  // Set value of windChill to "N/A"
+  let windChill = "N/A";
+
+  // Only calculate wind chill if wind is strong enough and temp is low enough
+  if (mph > 3.0 && temp <= 50) {
+    windChill = (
+      35.74 +
+      0.6215 * temp -
+      35.75 * mph ** 0.16 +
+      0.4275 * temp * mph ** 0.16
+    ).toFixed(2);
+    // console.log(`Wind chill: ${windChill} °F`);
+    windChill = `${windChill} °F`;
+  }
+
+  return windChill;
+};
+
+// **For debugging without Stormglass API
+output();

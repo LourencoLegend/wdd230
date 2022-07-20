@@ -262,6 +262,7 @@ h3 {
     float: left;
     min-width: 90px;
 }
+
 .weather p:nth-child(3) {
     border-top: #F7F7F7;
     margin-top:55px;

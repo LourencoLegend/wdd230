@@ -1,30 +1,75 @@
-// select HTML elements in the document
-const currentTemp = document.querySelector('#current-temp');
-const weatherIcon = document.querySelector('#weather-icon');
-const wind_speed = document.getElementById("wind");
-var wind_chill = document.getElementById("wind_chill");
-const captionDesc = document.querySelector('figcaption');
-const url = 'https://api.openweathermap.org/data/2.5/weather?q=Orem&appid={4a560932da68c6d09051ac9825c6d318}'
+// select HTML elements to edit
+const currentTemp = document.querySelector("#temp");
+const weatherIcon = document.querySelector("#textImg");
+const captionDesc = document.querySelector("#tempConditions");
+const windSpeed = document.querySelector("#windSpeedH4");
+const windChill = document.querySelector("#windChillH4");
 
-  
-apiFetch(url);
+const url =
+  "https://api.openweathermap.org/data/2.5/weather?q=Sao Paulo,SP,BR&units=imperial&appid=47b6a434ebf8169e3efc3593184ee675";
 
-async function apiFetch(apiURL) {
-    const response = await fetch(apiURL);
-    if (response.ok) {
-      const data = await response.json();
-      displayResults(data);
+async function fetchWeather() {
+  try {
+    const res = await fetch(url);
+    if (res.ok) {
+      const data = await res.json();
+
+      displayWeather(data);
     } else {
-        throw Error(await response.text());
+      throw Error(await res.text());
     }
-};
+  } catch (err) {
+    console.log(err);
+  }
+}
 
-function displayResults(weatherData) {
-    currentTemp.innerHTML = weatherData.main.temp.toFixed(1);
+fetchWeather();
 
-    const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
-    const desc = weatherData.weather[0].description;
-    weatherIcon.setAttribute('src', iconsrc);
-    weatherIcon.setAttribute('alt', desc);
-    captionDesc.textContent = desc;
+function displayWeather(data) {
+  fixTemp = data.main.temp.toFixed(0);
+
+  currentTemp.textContent = `${fixTemp}°F`;
+
+  const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+  const desc = data.weather[0].description;
+  const speed = data.wind.speed;
+
+  const words = desc.split(" ");
+
+  weatherIcon.setAttribute("src", iconsrc);
+  weatherIcon.setAttribute("alt", desc);
+  captionDesc.textContent = addCaps(words);
+
+  windSpeed.textContent = `${speed} mph`;
+  windChill.textContent = getWindChill(speed, fixTemp);
+}
+
+function addCaps(words) {
+  const capitalized = words
+    .map((word) => {
+      return word[0].toUpperCase() + word.substring(1);
+    })
+    .join(" ");
+
+  return capitalized;
+}
+
+// Calculate the Wind Chill Factor
+function getWindChill(mph, temp) {
+  // Set value of windChill to "N/A"
+  let windChill = "N/A";
+
+  // Only calculate wind chill if wind is strong enough and temp is low enough
+  if (mph > 3.0 && temp <= 50) {
+    windChill = (
+      35.74 +
+      0.6215 * temp -
+      35.75 * mph ** 0.16 +
+      0.4275 * temp * mph ** 0.16
+    ).toFixed(2);
+
+    windChill = `${windChill} °F`;
+  }
+
+  return windChill;
 }
