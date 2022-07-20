@@ -67,21 +67,18 @@
       </header>
 
       <main>
-        <div class="hero">
-          <picture class="hero-image">
-            <source media="(max-width: 637px)" srcset="images/" />
-            <source
-              media="(max-width: 1167px)"
-              srcset="images/heromedium.jpg"
-            />
-            <source media="(max-width: 1500px)" srcset="images/herolarge.jpg" />
-            <img src="images/heromedium.png" alt="Cristal Clear Lake photo" />
+        <div id="hero">   
+          <picture>
+              <source media="(min-width:57em)" srcset="images/heromedium.png">
+              <source media="(min-width:28em)" srcset="images/herosmall.png">
+              <img src="images/herooriginal.png" alt="Hero Image">
           </picture>
-          <h2><strong>Welcome to Sao Paulo</strong></h2>
-          <a href="join.html"
-            ><button id="joinButton">Join the Chamber</button></a
-          >
-        </div>
+          <section class="heroSection">
+              <h2>Spanish Fork Chamber of Commerce</h2>
+              <p><span id="name">The best place to live and work</span></p>
+          </section>
+          <!--<button type="submit" id="add">Join the Chamber</button>-->
+  </div>
         <div class="event">
           <h2>Ribbon Cutting</h2>
           <h3><strong>Formula 1</strong></h3>
